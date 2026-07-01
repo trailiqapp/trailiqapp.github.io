@@ -13,6 +13,7 @@
       --muted: #58635d;
       --panel: #ffffff;
       --border: #d9ded7;
+      --grid: rgba(23, 32, 27, 0.08);
       --accent: #1f7a5c;
       --accent-strong: #14513e;
       --blue: #2f6f95;
@@ -26,6 +27,7 @@
         --muted: #aab5ae;
         --panel: #1a211c;
         --border: #334036;
+        --grid: rgba(237, 243, 238, 0.08);
         --accent: #5bd39e;
         --accent-strong: #87e6ba;
         --blue: #76b7db;
@@ -117,8 +119,8 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       background:
-        linear-gradient(90deg, color-mix(in srgb, var(--border) 42%, transparent) 1px, transparent 1px),
-        linear-gradient(color-mix(in srgb, var(--border) 42%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+        linear-gradient(var(--grid) 1px, transparent 1px),
         var(--panel);
       background-size: 34px 34px;
       min-height: 360px;
