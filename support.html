@@ -4,201 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trail IQ Support</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #f7f8f4;
-      --text: #17201b;
-      --muted: #58635d;
-      --panel: #ffffff;
-      --panel-soft: #eef3ef;
-      --border: #d9ded7;
-      --accent: #1f7a5c;
-      --accent-strong: #14513e;
-      --blue: #2f6f95;
-      --shadow: rgba(23, 32, 27, 0.12);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111612;
-        --text: #edf3ee;
-        --muted: #aab5ae;
-        --panel: #1a211c;
-        --panel-soft: #141b16;
-        --border: #334036;
-        --accent: #5bd39e;
-        --accent-strong: #87e6ba;
-        --blue: #76b7db;
-        --shadow: rgba(0, 0, 0, 0.28);
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    main {
-      box-sizing: border-box;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 26px 20px 64px;
-    }
-
-    .site-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 26px 20px 0;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .brand img {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      box-shadow: 0 8px 20px var(--shadow);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 10px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    article {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: clamp(20px, 4vw, 40px);
-      box-shadow: 0 16px 48px var(--shadow);
-    }
-
-    h1, h2, h3 {
-      line-height: 1.2;
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(2rem, 6vw, 3.5rem);
-    }
-
-    h2 {
-      margin-top: 2rem;
-      color: var(--accent);
-    }
-
-    p, li {
-      color: var(--muted);
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    .lede {
-      margin: 0 0 2rem;
-      font-size: 1.1rem;
-    }
-
-    .doc-heading {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 24px;
-    }
-
-    .doc-heading img {
-      width: 76px;
-      height: 76px;
-      border-radius: 18px;
-      box-shadow: 0 10px 28px var(--shadow);
-    }
-
-    .eyebrow {
-      margin: 0 0 6px;
-      color: var(--accent-strong);
-      font-size: 0.8rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .support-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin: 0 0 28px;
-    }
-
-    .support-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--panel-soft);
-      padding: 16px;
-    }
-
-    .support-card strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--text);
-    }
-
-    .support-card span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    @media (max-width: 680px) {
-      .site-nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-      }
-
-      .doc-heading {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .support-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
   <nav class="site-nav" aria-label="Trail IQ public site">
@@ -208,12 +14,13 @@
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
       <a href="privacy.html">Privacy</a>
     </div>
   </nav>
 
   <main>
-    <article>
+    <header class="doc-hero">
       <div class="doc-heading">
         <img src="assets/app-icon.png" alt="">
         <div>
@@ -233,45 +40,78 @@
           <span>Avoid sending screenshots or backups that reveal sensitive locations.</span>
         </div>
       </section>
+    </header>
 
-      <h2>What To Include</h2>
-      <ul>
-        <li>Your iPhone model and iOS version.</li>
-        <li>The Trail IQ app version.</li>
-        <li>A short description of what happened.</li>
-        <li>Whether the issue happened during a live workout, import, export, Apple Health import/export, Bluetooth monitor connection, ECG wellness capture, or another flow.</li>
-        <li>The heart-rate monitor model, if the issue involves Bluetooth, HRV, resting heart-rate tests, or ECG capture.</li>
-      </ul>
-      <p>Do not include private routes, health-test exports, screenshots with home/work locations, or backup files unless support specifically asks for them and you are comfortable sharing that information.</p>
-      <p>Trail IQ support is email-based and user initiated. The app does not automatically send workout, route, heart-rate, ECG wellness, profile, device, or diagnostic data to support.</p>
+    <div class="doc-layout">
+      <aside class="toc" aria-label="Support sections">
+        <p class="toc-title">Support</p>
+        <a href="#contact">Contact Support</a>
+        <a href="#include">What To Include</a>
+        <a href="#checks">Common Checks</a>
+        <a href="#privacy">Privacy</a>
+      </aside>
 
-      <h2>Common Checks</h2>
+      <div class="content">
+        <section id="contact" class="content-section">
+          <h2>Contact Support</h2>
+          <div class="contact-strip">
+            <p>Email <a href="mailto:peter.farmer@pgke.com.au">peter.farmer@pgke.com.au</a> for Trail IQ support.</p>
+            <a class="button" href="mailto:peter.farmer@pgke.com.au">Email Support</a>
+          </div>
+          <p>Trail IQ support is email-based and user initiated. The app does not automatically send workout, route, heart-rate, ECG wellness, profile, device, or diagnostic data to support.</p>
+        </section>
 
-      <h3>Manage Or Delete Your Data</h3>
-      <p>Open Trail IQ &gt; Settings &gt; Privacy &amp; Data to export a backup, import a backup, delete workouts, delete health tests, delete routes, or reset the app to factory defaults.</p>
-      <p>Exports may contain private route, workout, heart-rate, profile, settings, and wellness-test data. Share backup files carefully.</p>
-      <p>Support cannot remotely delete data that is stored only on your iPhone. Use the in-app delete/reset controls for local data, and manage any exported files or Apple Health records in the place where you saved them.</p>
+        <section id="include" class="content-section">
+          <h2>What To Include</h2>
+          <ul>
+            <li>Your iPhone model and iOS version.</li>
+            <li>The Trail IQ app version.</li>
+            <li>A short description of what happened.</li>
+            <li>Whether the issue happened during a live workout, import, export, Apple Health import/export, Bluetooth monitor connection, ECG wellness capture, or another flow.</li>
+            <li>The heart-rate monitor model, if the issue involves Bluetooth, HRV, resting heart-rate tests, or ECG capture.</li>
+          </ul>
+          <p>Do not include private routes, health-test exports, screenshots with home/work locations, or backup files unless support specifically asks for them and you are comfortable sharing that information.</p>
+        </section>
 
-      <h3>Location And Background Workouts</h3>
-      <p>For outdoor route recording, make sure Trail IQ has Location permission. For workouts that continue while the app is backgrounded or the screen is locked, allow background location access when prompted by iOS.</p>
+        <section id="checks" class="content-section">
+          <h2>Common Checks</h2>
+          <div class="checks-grid">
+            <div class="check-card">
+              <strong>Manage Or Delete Your Data</strong>
+              <span>Open Trail IQ &gt; Settings &gt; Privacy &amp; Data to export, import, delete, or reset local app data.</span>
+            </div>
+            <div class="check-card">
+              <strong>Location And Background Workouts</strong>
+              <span>For route recording and locked-screen workouts, allow Location access when prompted by iOS.</span>
+            </div>
+            <div class="check-card">
+              <strong>Bluetooth Heart-Rate Monitors</strong>
+              <span>Connect a compatible monitor from Settings &gt; Devices and Health for HR-led workouts and wellness tests.</span>
+            </div>
+            <div class="check-card">
+              <strong>Apple Health</strong>
+              <span>Review or change Health permissions in the iOS Health app or iOS Settings.</span>
+            </div>
+            <div class="check-card">
+              <strong>ECG Wellness Capture</strong>
+              <span>ECG capture requires supported ECG-capable Polar hardware and is for personal wellness review only.</span>
+            </div>
+            <div class="check-card">
+              <strong>Backups And Exports</strong>
+              <span>Export a local backup before deleting app data, moving devices, or testing risky flows.</span>
+            </div>
+          </div>
+          <p>Exports may contain private route, workout, heart-rate, profile, settings, and wellness-test data. Share backup files carefully.</p>
+          <p>Support cannot remotely delete data that is stored only on your iPhone. Use the in-app delete/reset controls for local data, and manage any exported files or Apple Health records in the place where you saved them.</p>
+        </section>
 
-      <h3>Bluetooth Heart-Rate Monitors</h3>
-      <p>For heart-rate-led workouts, HRV, resting heart-rate tests, and ECG wellness capture, connect a compatible Bluetooth heart-rate monitor from Settings &gt; Devices and Health.</p>
-      <p>If a monitor disconnects during a workout, open Settings &gt; Devices and Health, scan for monitors, and reconnect the device.</p>
-
-      <h3>Apple Health</h3>
-      <p>Apple Health import/export requires Health permissions. You can review or change these permissions in the iOS Health app or iOS Settings.</p>
-
-      <h3>ECG Wellness Capture</h3>
-      <p>ECG capture is available only with supported ECG-capable Polar hardware. Trail IQ ECG capture is for personal fitness and wellness review only. It does not diagnose rhythms, medical conditions, or provide treatment guidance.</p>
-
-      <h3>Backups And Exports</h3>
-      <p>Trail IQ is local-first. Use Settings &gt; Privacy &amp; Data to export a local backup before deleting app data, moving devices, or testing risky flows.</p>
-
-      <h2>Privacy</h2>
-      <p>Trail IQ is local-first and does not use third-party advertising, tracking, or data sale.</p>
-      <p>Read the <a href="privacy.html">Trail IQ Privacy Policy</a>.</p>
-    </article>
+        <section id="privacy" class="content-section">
+          <h2>Privacy</h2>
+          <p>Trail IQ is local-first and does not use third-party advertising, tracking, or data sale.</p>
+          <p>Read the <a href="privacy.html">Trail IQ Privacy Policy</a>.</p>
+        </section>
+      </div>
+    </div>
   </main>
 </body>
 </html>

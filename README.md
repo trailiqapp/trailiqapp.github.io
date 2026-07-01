@@ -5,6 +5,7 @@ This repository hosts the public Trail IQ website, privacy policy, and support p
 ## Published URLs
 
 - Home: <https://trailiqapp.github.io/>
+- Features: <https://trailiqapp.github.io/features.html>
 - Privacy Policy: <https://trailiqapp.github.io/privacy.html>
 - Support: <https://trailiqapp.github.io/support.html>
 
@@ -23,8 +24,10 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 ## Files
 
 - `index.html` - simple public Trail IQ landing page.
+- `features.html` - friendly overview of Trail IQ features.
 - `privacy.html` - Trail IQ Privacy Policy.
 - `support.html` - Trail IQ Support page.
+- `assets/site.css` - shared styling for the public pages.
 - `assets/app-icon.png` - Trail IQ app icon used by the public pages.
 - `.nojekyll` - keeps GitHub Pages serving the static files directly.
 
