@@ -12,12 +12,14 @@
       --text: #17201b;
       --muted: #58635d;
       --panel: #ffffff;
+      --panel-soft: #eef3ef;
       --border: #d9ded7;
       --grid: rgba(23, 32, 27, 0.08);
       --accent: #1f7a5c;
       --accent-strong: #14513e;
       --blue: #2f6f95;
       --amber: #a45f10;
+      --shadow: rgba(23, 32, 27, 0.12);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -26,12 +28,14 @@
         --text: #edf3ee;
         --muted: #aab5ae;
         --panel: #1a211c;
+        --panel-soft: #141b16;
         --border: #334036;
         --grid: rgba(237, 243, 238, 0.08);
         --accent: #5bd39e;
         --accent-strong: #87e6ba;
         --blue: #76b7db;
         --amber: #e6aa4f;
+        --shadow: rgba(0, 0, 0, 0.28);
       }
     }
 
@@ -49,15 +53,96 @@
     main {
       max-width: 1040px;
       margin: 0 auto;
-      padding: 40px 20px 56px;
+      padding: 26px 20px 56px;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
     }
 
     header {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
-      gap: 28px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
       align-items: center;
       min-height: 70vh;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        var(--panel);
+      background-size: 36px 36px;
+      padding: clamp(26px, 7vw, 76px);
+      box-shadow: 0 16px 48px var(--shadow);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+
+    .hero-mark {
+      position: absolute;
+      right: clamp(-100px, -5vw, -28px);
+      bottom: clamp(-120px, -8vw, -46px);
+      width: min(58vw, 620px);
+      max-width: 78%;
+      opacity: 0.14;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .kicker {
+      display: inline-flex;
+      margin-bottom: 18px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 12px;
+      background: color-mix(in srgb, var(--panel-soft) 82%, transparent);
+      color: var(--accent-strong);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     h1 {
@@ -155,6 +240,7 @@
       border-radius: 8px;
       background: var(--panel);
       padding: 18px;
+      box-shadow: 0 10px 28px var(--shadow);
     }
 
     .section-card p {
@@ -168,7 +254,6 @@
     }
 
     @media (max-width: 760px) {
-      header,
       .sections {
         grid-template-columns: 1fr;
       }
@@ -177,16 +262,40 @@
         min-height: auto;
       }
 
-      .route-visual {
-        min-height: 280px;
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero-mark {
+        width: 86vw;
+        max-width: none;
+        opacity: 0.08;
       }
     }
   </style>
 </head>
 <body>
   <main>
+    <nav class="site-nav" aria-label="Trail IQ public site">
+      <a class="brand" href="index.html">
+        <img src="assets/app-icon.png" alt="">
+        <span>Trail IQ</span>
+      </a>
+      <div class="nav-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </nav>
+
     <header>
-      <section aria-labelledby="page-title">
+      <img class="hero-mark" src="assets/app-icon.png" alt="">
+      <section class="hero-content" aria-labelledby="page-title">
+        <span class="kicker">Route-aware fitness</span>
         <h1 id="page-title">Trail IQ</h1>
         <p class="lede">A local-first fitness app for route-aware walks, runs, rides, and outdoor workouts.</p>
         <div class="actions" aria-label="Trail IQ public links">
@@ -195,23 +304,6 @@
         </div>
       </section>
 
-      <section class="route-visual" aria-label="Stylised route map">
-        <svg viewBox="0 0 520 360" role="img" aria-labelledby="route-title route-desc">
-          <title id="route-title">Trail IQ route view</title>
-          <desc id="route-desc">A stylised route line with start, finish, and effort markers.</desc>
-          <path d="M78 282 C120 236 166 314 210 254 C251 199 170 156 222 113 C282 62 335 123 313 178 C294 226 371 235 404 190 C433 151 412 100 462 75" fill="none" stroke="var(--blue)" stroke-width="12" stroke-linecap="round"/>
-          <path d="M78 282 C120 236 166 314 210 254 C251 199 170 156 222 113 C282 62 335 123 313 178 C294 226 371 235 404 190 C433 151 412 100 462 75" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
-          <circle cx="78" cy="282" r="14" fill="var(--accent-strong)"/>
-          <circle cx="462" cy="75" r="14" fill="var(--amber)"/>
-          <circle cx="222" cy="113" r="7" fill="var(--panel)" stroke="var(--accent)" stroke-width="4"/>
-          <circle cx="313" cy="178" r="7" fill="var(--panel)" stroke="var(--blue)" stroke-width="4"/>
-          <circle cx="404" cy="190" r="7" fill="var(--panel)" stroke="var(--amber)" stroke-width="4"/>
-        </svg>
-        <div class="map-label">
-          <span>Route memory</span>
-          <span>Private by design</span>
-        </div>
-      </section>
     </header>
 
     <section class="sections" aria-label="Trail IQ summary">

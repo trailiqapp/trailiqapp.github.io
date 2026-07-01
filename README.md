@@ -25,6 +25,7 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 - `index.html` - simple public Trail IQ landing page.
 - `privacy.html` - Trail IQ Privacy Policy.
 - `support.html` - Trail IQ Support page.
+- `assets/app-icon.png` - Trail IQ app icon used by the public pages.
 - `.nojekyll` - keeps GitHub Pages serving the static files directly.
 
 ## Release Notes
