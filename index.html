@@ -1,1 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trail IQ</title>
+  <meta name="description" content="Trail IQ is a local-first fitness app for route-aware outdoor workouts.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f8f4;
+      --text: #17201b;
+      --muted: #58635d;
+      --panel: #ffffff;
+      --border: #d9ded7;
+      --accent: #1f7a5c;
+      --accent-strong: #14513e;
+      --blue: #2f6f95;
+      --amber: #a45f10;
+    }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111612;
+        --text: #edf3ee;
+        --muted: #aab5ae;
+        --panel: #1a211c;
+        --border: #334036;
+        --accent: #5bd39e;
+        --accent-strong: #87e6ba;
+        --blue: #76b7db;
+        --amber: #e6aa4f;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: 28px;
+      align-items: center;
+      min-height: 70vh;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 11vw, 6.5rem);
+      line-height: 0.92;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .lede {
+      max-width: 620px;
+      margin: 22px 0 0;
+      font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 16px;
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+      background: var(--panel);
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .route-visual {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, color-mix(in srgb, var(--border) 42%, transparent) 1px, transparent 1px),
+        linear-gradient(color-mix(in srgb, var(--border) 42%, transparent) 1px, transparent 1px),
+        var(--panel);
+      background-size: 34px 34px;
+      min-height: 360px;
+      padding: 22px;
+    }
+
+    .route-visual svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .map-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .section-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px;
+    }
+
+    .section-card p {
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 36px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 760px) {
+      header,
+      .sections {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .route-visual {
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <section aria-labelledby="page-title">
+        <h1 id="page-title">Trail IQ</h1>
+        <p class="lede">A local-first fitness app for route-aware walks, runs, rides, and outdoor workouts.</p>
+        <div class="actions" aria-label="Trail IQ public links">
+          <a class="button primary" href="privacy.html">Privacy Policy</a>
+          <a class="button" href="support.html">Support</a>
+        </div>
+      </section>
+
+      <section class="route-visual" aria-label="Stylised route map">
+        <svg viewBox="0 0 520 360" role="img" aria-labelledby="route-title route-desc">
+          <title id="route-title">Trail IQ route view</title>
+          <desc id="route-desc">A stylised route line with start, finish, and effort markers.</desc>
+          <path d="M78 282 C120 236 166 314 210 254 C251 199 170 156 222 113 C282 62 335 123 313 178 C294 226 371 235 404 190 C433 151 412 100 462 75" fill="none" stroke="var(--blue)" stroke-width="12" stroke-linecap="round"/>
+          <path d="M78 282 C120 236 166 314 210 254 C251 199 170 156 222 113 C282 62 335 123 313 178 C294 226 371 235 404 190 C433 151 412 100 462 75" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="78" cy="282" r="14" fill="var(--accent-strong)"/>
+          <circle cx="462" cy="75" r="14" fill="var(--amber)"/>
+          <circle cx="222" cy="113" r="7" fill="var(--panel)" stroke="var(--accent)" stroke-width="4"/>
+          <circle cx="313" cy="178" r="7" fill="var(--panel)" stroke="var(--blue)" stroke-width="4"/>
+          <circle cx="404" cy="190" r="7" fill="var(--panel)" stroke="var(--amber)" stroke-width="4"/>
+        </svg>
+        <div class="map-label">
+          <span>Route memory</span>
+          <span>Private by design</span>
+        </div>
+      </section>
+    </header>
+
+    <section class="sections" aria-label="Trail IQ summary">
+      <article class="section-card">
+        <h2>Route-Aware</h2>
+        <p>Trail IQ helps review outdoor workouts with route context, saved routes, and same-route comparison where available.</p>
+      </article>
+      <article class="section-card">
+        <h2>Local-First</h2>
+        <p>Workout, route, heart-rate, health-test, profile, settings, and comparison data are stored locally on device.</p>
+      </article>
+      <article class="section-card">
+        <h2>Health-Aware</h2>
+        <p>Apple Health integration is optional and permission controlled. ECG features are for wellness review only.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>For privacy or support questions, email <a href="mailto:peter.farmer@pgke.com.au">peter.farmer@pgke.com.au</a>.</p>
+    </footer>
+  </main>
+</body>
+</html>
