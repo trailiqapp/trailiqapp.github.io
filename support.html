@@ -1,1 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trail IQ Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f8f4;
+      --text: #17201b;
+      --muted: #58635d;
+      --panel: #ffffff;
+      --border: #d9ded7;
+      --accent: #1f7a5c;
+    }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111612;
+        --text: #edf3ee;
+        --muted: #aab5ae;
+        --panel: #1a211c;
+        --border: #334036;
+        --accent: #5bd39e;
+      }
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      box-sizing: border-box;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: clamp(20px, 4vw, 40px);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: var(--accent);
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .lede {
+      margin: 0 0 2rem;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>Trail IQ Support</h1>
+      <p class="lede">Need help with Trail IQ? Email <a href="mailto:peter.farmer@pgke.com.au">peter.farmer@pgke.com.au</a>.</p>
+
+      <h2>What To Include</h2>
+      <ul>
+        <li>Your iPhone model and iOS version.</li>
+        <li>The Trail IQ app version.</li>
+        <li>A short description of what happened.</li>
+        <li>Whether the issue happened during a live workout, import, export, Apple Health import/export, Bluetooth monitor connection, ECG wellness capture, or another flow.</li>
+        <li>The heart-rate monitor model, if the issue involves Bluetooth, HRV, resting heart-rate tests, or ECG capture.</li>
+      </ul>
+      <p>Do not include private routes, health-test exports, screenshots with home/work locations, or backup files unless support specifically asks for them and you are comfortable sharing that information.</p>
+      <p>Trail IQ support is email-based and user initiated. The app does not automatically send workout, route, heart-rate, ECG wellness, profile, device, or diagnostic data to support.</p>
+
+      <h2>Common Checks</h2>
+
+      <h3>Manage Or Delete Your Data</h3>
+      <p>Open Trail IQ &gt; Settings &gt; Privacy &amp; Data to export a backup, import a backup, delete workouts, delete health tests, delete routes, or reset the app to factory defaults.</p>
+      <p>Exports may contain private route, workout, heart-rate, profile, settings, and wellness-test data. Share backup files carefully.</p>
+      <p>Support cannot remotely delete data that is stored only on your iPhone. Use the in-app delete/reset controls for local data, and manage any exported files or Apple Health records in the place where you saved them.</p>
+
+      <h3>Location And Background Workouts</h3>
+      <p>For outdoor route recording, make sure Trail IQ has Location permission. For workouts that continue while the app is backgrounded or the screen is locked, allow background location access when prompted by iOS.</p>
+
+      <h3>Bluetooth Heart-Rate Monitors</h3>
+      <p>For heart-rate-led workouts, HRV, resting heart-rate tests, and ECG wellness capture, connect a compatible Bluetooth heart-rate monitor from Settings &gt; Devices and Health.</p>
+      <p>If a monitor disconnects during a workout, open Settings &gt; Devices and Health, scan for monitors, and reconnect the device.</p>
+
+      <h3>Apple Health</h3>
+      <p>Apple Health import/export requires Health permissions. You can review or change these permissions in the iOS Health app or iOS Settings.</p>
+
+      <h3>ECG Wellness Capture</h3>
+      <p>ECG capture is available only with supported ECG-capable Polar hardware. Trail IQ ECG capture is for personal fitness and wellness review only. It does not diagnose rhythms, medical conditions, or provide treatment guidance.</p>
+
+      <h3>Backups And Exports</h3>
+      <p>Trail IQ is local-first. Use Settings &gt; Privacy &amp; Data to export a local backup before deleting app data, moving devices, or testing risky flows.</p>
+
+      <h2>Privacy</h2>
+      <p>Trail IQ is local-first and does not use third-party advertising, tracking, or data sale.</p>
+      <p>Read the <a href="privacy.html">Trail IQ Privacy Policy</a>.</p>
+    </article>
+  </main>
+</body>
+</html>
