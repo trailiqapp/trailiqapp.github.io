@@ -23,12 +23,13 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 
 ## Files
 
-- `index.html` - simple public Trail IQ landing page.
-- `features.html` - friendly overview of Trail IQ features.
+- `index.html` - product landing page built around Trail IQ route memory.
+- `features.html` - visual overview of route comparison, live workouts, results, heart-rate tools, and privacy.
 - `privacy.html` - Trail IQ Privacy Policy.
 - `support.html` - Trail IQ Support page.
 - `assets/site.css` - shared styling for the public pages.
 - `assets/app-icon.png` - Trail IQ app icon used by the public pages.
+- `assets/screen-*.png` - current Trail IQ product screenshots used across the marketing pages.
 - `.nojekyll` - keeps GitHub Pages serving the static files directly.
 
 ## Release Notes

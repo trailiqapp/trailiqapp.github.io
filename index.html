@@ -3,328 +3,224 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trail IQ</title>
-  <meta name="description" content="Trail IQ is a local-first fitness app for route-aware outdoor workouts.">
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #f7f8f4;
-      --text: #17201b;
-      --muted: #58635d;
-      --panel: #ffffff;
-      --panel-soft: #eef3ef;
-      --border: #d9ded7;
-      --grid: rgba(23, 32, 27, 0.08);
-      --accent: #1f7a5c;
-      --accent-strong: #14513e;
-      --blue: #2f6f95;
-      --amber: #a45f10;
-      --shadow: rgba(23, 32, 27, 0.12);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111612;
-        --text: #edf3ee;
-        --muted: #aab5ae;
-        --panel: #1a211c;
-        --panel-soft: #141b16;
-        --border: #334036;
-        --grid: rgba(237, 243, 238, 0.08);
-        --accent: #5bd39e;
-        --accent-strong: #87e6ba;
-        --blue: #76b7db;
-        --amber: #e6aa4f;
-        --shadow: rgba(0, 0, 0, 0.28);
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    main {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 26px 20px 56px;
-    }
-
-    .site-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .brand img {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      box-shadow: 0 8px 20px var(--shadow);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 10px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    header {
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      min-height: 70vh;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background:
-        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
-        linear-gradient(var(--grid) 1px, transparent 1px),
-        var(--panel);
-      background-size: 36px 36px;
-      padding: clamp(26px, 7vw, 76px);
-      box-shadow: 0 16px 48px var(--shadow);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 680px;
-    }
-
-    .hero-mark {
-      position: absolute;
-      right: clamp(-100px, -5vw, -28px);
-      bottom: clamp(-120px, -8vw, -46px);
-      width: min(58vw, 620px);
-      max-width: 78%;
-      opacity: 0.14;
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .kicker {
-      display: inline-flex;
-      margin-bottom: 18px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 6px 12px;
-      background: color-mix(in srgb, var(--panel-soft) 82%, transparent);
-      color: var(--accent-strong);
-      font-size: 0.82rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(3rem, 11vw, 6.5rem);
-      line-height: 0.92;
-      letter-spacing: 0;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.35rem;
-      line-height: 1.2;
-    }
-
-    p {
-      color: var(--muted);
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    .lede {
-      max-width: 620px;
-      margin: 22px 0 0;
-      font-size: clamp(1.1rem, 2.4vw, 1.35rem);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .button {
-      display: inline-flex;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 10px 16px;
-      color: var(--text);
-      font-weight: 700;
-      text-decoration: none;
-      background: var(--panel);
-    }
-
-    .button.primary {
-      border-color: var(--accent);
-      background: var(--accent);
-      color: #ffffff;
-    }
-
-    .route-visual {
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background:
-        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
-        linear-gradient(var(--grid) 1px, transparent 1px),
-        var(--panel);
-      background-size: 34px 34px;
-      min-height: 360px;
-      padding: 22px;
-    }
-
-    .route-visual svg {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .map-label {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
-
-    .sections {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .section-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--panel);
-      padding: 18px;
-      box-shadow: 0 10px 28px var(--shadow);
-    }
-
-    .section-card p {
-      margin: 0;
-    }
-
-    footer {
-      margin-top: 36px;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    @media (max-width: 760px) {
-      .sections {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        min-height: auto;
-      }
-
-      .site-nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-      }
-
-      .hero-mark {
-        width: 86vw;
-        max-width: none;
-        opacity: 0.08;
-      }
-    }
-  </style>
+  <meta name="theme-color" content="#07110f">
+  <title>Trail IQ | Your routes remember</title>
+  <meta name="description" content="Trail IQ remembers the routes you walk, run and ride, then shows what changed and what to try next time.">
+  <meta property="og:title" content="Trail IQ | Your routes remember">
+  <meta property="og:description" content="Record outdoor workouts, compare every return and learn from the routes you repeat.">
+  <meta property="og:image" content="assets/screen-result.png">
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="assets/site.css?v=4">
 </head>
 <body>
+  <nav class="site-nav on-dark" aria-label="Trail IQ public site">
+    <a class="brand" href="index.html" aria-current="page">
+      <img src="assets/app-icon.png" alt="">
+      <span>Trail IQ</span>
+    </a>
+    <div class="nav-links">
+      <a href="features.html">Features</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>
+
   <main>
-    <nav class="site-nav" aria-label="Trail IQ public site">
-      <a class="brand" href="index.html">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Route-first outdoor training</p>
+          <h1>Trail IQ</h1>
+          <p class="lede">Your routes remember. Walk them, run them or ride them, then return to see what changed and what to try next time.</p>
+          <div class="actions">
+            <a class="button bright" href="features.html">Explore Trail IQ</a>
+            <a class="button ghost" href="support.html">Get support</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="promise-strip" aria-label="Trail IQ at a glance">
+      <div class="promise-grid">
+        <div class="promise-item">
+          <strong>Remember the route</strong>
+          <span>Save familiar paths and build a useful history with every return.</span>
+        </div>
+        <div class="promise-item">
+          <strong>Understand the effort</strong>
+          <span>See where time, pace, terrain and heart rate changed.</span>
+        </div>
+        <div class="promise-item">
+          <strong>Own your data</strong>
+          <span>Core workout and health data stays on your device.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner story-layout">
+        <div class="story-copy">
+          <p class="eyebrow">More than a workout log</p>
+          <h2>Run the same route. Learn something new.</h2>
+          <p>Trail IQ turns repeat routes into personal training history. It compares the same workout type, so a walk stays a walk, a run stays a run and every result has useful context.</p>
+
+          <div class="story-list">
+            <div class="story-point">
+              <span class="story-index">1</span>
+              <div>
+                <strong>Record</strong>
+                <span>Track the route, distance, pace or speed, elevation and splits.</span>
+              </div>
+            </div>
+            <div class="story-point">
+              <span class="story-index">2</span>
+              <div>
+                <strong>Compare</strong>
+                <span>See where you gained, where you slowed and how effort changed.</span>
+              </div>
+            </div>
+            <div class="story-point">
+              <span class="story-index">3</span>
+              <div>
+                <strong>Return</strong>
+                <span>Take a clear, practical next step into your next attempt.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="screen-stage" aria-label="Trail IQ workout result and live ghost screens">
+          <figure class="phone-shot secondary">
+            <img src="assets/screen-ghost.png" alt="A live Trail IQ workout comparing the user with a previous effort on the same route.">
+          </figure>
+          <figure class="phone-shot primary">
+            <img src="assets/screen-result.png" alt="A Trail IQ workout result with same-route comparison rings.">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band-dark">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Built for the route ahead</p>
+          <h2>Useful while you move. Clear when you finish.</h2>
+          <p>Advanced route and heart-rate tools stay understandable, optional and focused on the workout.</p>
+        </div>
+
+        <div class="feature-rows">
+          <div class="feature-row">
+            <span class="feature-number">Live</span>
+            <strong>Train the route</strong>
+            <p>Follow route progress, remaining distance and segment context. Choose a previous effort as your live ghost when you want a target.</p>
+          </div>
+          <div class="feature-row">
+            <span class="feature-number">Effort</span>
+            <strong>Connect heart rate</strong>
+            <p>Use a compatible Bluetooth monitor for live zones, heart-rate goals, workout HRV where supported and richer post-workout review.</p>
+          </div>
+          <div class="feature-row">
+            <span class="feature-number">Cues</span>
+            <strong>Stay aware</strong>
+            <p>Optional on-screen guidance, tones and haptics can signal route, segment and effort changes without taking over your workout.</p>
+          </div>
+          <div class="feature-row">
+            <span class="feature-number">Review</span>
+            <strong>See the whole story</strong>
+            <p>Route Replay, Where It Changed and Coach Review turn maps and metrics into a result you can act on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Designed to be read at a glance</p>
+          <h2>Your workout, without the wall of numbers.</h2>
+          <p>Maps, comparison rings and focused charts make the important result visible first. Detail is there when you want it.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <article class="showcase">
+            <div class="showcase-media">
+              <img src="assets/screen-replay.png" alt="Trail IQ Route Replay showing a real route and comparison points.">
+            </div>
+            <div class="showcase-copy">
+              <h3>Replay the route</h3>
+              <p>Review the route, overlays and finish context spatially.</p>
+            </div>
+          </article>
+          <article class="showcase">
+            <div class="showcase-media">
+              <img src="assets/screen-result.png" alt="Trail IQ workout result with route comparison metrics.">
+            </div>
+            <div class="showcase-copy">
+              <h3>Understand the result</h3>
+              <p>See today and the previous matching effort in one clean view.</p>
+            </div>
+          </article>
+          <article class="showcase">
+            <div class="showcase-media">
+              <img src="assets/screen-trends.png" alt="Trail IQ fitness snapshot and workload trends.">
+            </div>
+            <div class="showcase-copy">
+              <h3>Follow the bigger picture</h3>
+              <p>Explore training trends and fitness snapshots when relevant data exists.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section privacy-band">
+      <div class="section-inner privacy-layout">
+        <div>
+          <p class="eyebrow">Private by design</p>
+          <h2>Powerful fitness context. Kept on your device.</h2>
+          <p>Trail IQ is local-first. It does not upload your health data to Trail IQ servers, does not use third-party advertising and does not track you across apps or websites.</p>
+          <div class="actions">
+            <a class="button" href="privacy.html">Read the privacy policy</a>
+          </div>
+        </div>
+        <div class="privacy-facts" aria-label="Trail IQ privacy facts">
+          <div class="privacy-fact">No Trail IQ account required</div>
+          <div class="privacy-fact">Apple Health is optional</div>
+          <div class="privacy-fact">Local backup and restore</div>
+          <div class="privacy-fact">No advertising or data sale</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="section-inner">
+        <p class="eyebrow">Record. Understand. Return.</p>
+        <h2>Make your familiar routes more useful.</h2>
+        <p>Trail IQ is built for the morning walk, the regular running loop and the ride you know well enough to want to ride better.</p>
+        <div class="actions">
+          <a class="button bright" href="features.html">See all features</a>
+          <a class="button outline" href="mailto:trailiqhelp@pgke.com.au">Contact Trail IQ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
         <img src="assets/app-icon.png" alt="">
-        <span>Trail IQ</span>
-      </a>
-      <div class="nav-links">
+        <div>
+          <strong>Trail IQ</strong>
+          <span>Route-first outdoor training</span>
+        </div>
+      </div>
+      <div class="footer-links">
         <a href="features.html">Features</a>
         <a href="privacy.html">Privacy</a>
         <a href="support.html">Support</a>
+        <a href="mailto:trailiqhelp@pgke.com.au">Email</a>
       </div>
-    </nav>
-
-    <header>
-      <img class="hero-mark" src="assets/app-icon.png" alt="">
-      <section class="hero-content" aria-labelledby="page-title">
-        <span class="kicker">Route-aware fitness</span>
-        <h1 id="page-title">Trail IQ</h1>
-        <p class="lede">A local-first fitness app for route-aware walks, runs, rides, and outdoor workouts.</p>
-        <div class="actions" aria-label="Trail IQ public links">
-          <a class="button primary" href="features.html">Explore Features</a>
-          <a class="button" href="privacy.html">Privacy Policy</a>
-        </div>
-      </section>
-
-    </header>
-
-    <section class="sections" aria-label="Trail IQ summary">
-      <article class="section-card">
-        <h2>Route-Aware</h2>
-        <p>Trail IQ helps review outdoor workouts with route context, saved routes, and same-route comparison where available.</p>
-      </article>
-      <article class="section-card">
-        <h2>Local-First</h2>
-        <p>Workout, route, heart-rate, health-test, profile, settings, and comparison data are stored locally on device.</p>
-      </article>
-      <article class="section-card">
-        <h2>Health-Aware</h2>
-        <p>Apple Health integration is optional and permission controlled. ECG features are for wellness review only.</p>
-      </article>
-    </section>
-
-    <footer>
-      <p>For privacy or support questions, email <a href="mailto:trailiqhelp@pgke.com.au">trailiqhelp@pgke.com.au</a>.</p>
-    </footer>
-  </main>
+    </div>
+  </footer>
 </body>
 </html>

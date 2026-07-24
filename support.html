@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7f9">
   <title>Trail IQ Support</title>
-  <link rel="stylesheet" href="assets/site.css">
+  <meta name="description" content="Trail IQ support, troubleshooting and privacy-conscious contact guidance.">
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="assets/site.css?v=4">
 </head>
 <body>
   <nav class="site-nav" aria-label="Trail IQ public site">
@@ -13,14 +16,14 @@
       <span>Trail IQ</span>
     </a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
       <a href="features.html">Features</a>
       <a href="privacy.html">Privacy</a>
+      <a href="support.html" aria-current="page">Support</a>
     </div>
   </nav>
 
-  <main>
-    <header class="doc-hero">
+  <header class="doc-hero">
+    <div class="doc-main">
       <div class="doc-heading">
         <img src="assets/app-icon.png" alt="">
         <div>
@@ -30,18 +33,24 @@
         </div>
       </div>
 
-      <section class="support-grid" aria-label="Support summary">
-        <div class="support-card">
+      <section class="summary-grid" aria-label="Support summary">
+        <div class="summary-item">
           <strong>Email support</strong>
-          <span>Support is user initiated. Trail IQ does not automatically send your data.</span>
+          <span>Help is available directly from the Trail IQ support address.</span>
         </div>
-        <div class="support-card">
-          <strong>Protect private routes</strong>
-          <span>Avoid sending screenshots or backups that reveal sensitive locations.</span>
+        <div class="summary-item">
+          <strong>User initiated</strong>
+          <span>Trail IQ does not automatically send your app data.</span>
+        </div>
+        <div class="summary-item">
+          <strong>Privacy conscious</strong>
+          <span>Keep sensitive routes and wellness exports private.</span>
         </div>
       </section>
-    </header>
+    </div>
+  </header>
 
+  <main class="doc-main">
     <div class="doc-layout">
       <aside class="toc" aria-label="Support sections">
         <p class="toc-title">Support</p>
@@ -54,8 +63,11 @@
       <div class="content">
         <section id="contact" class="content-section">
           <h2>Contact Support</h2>
-          <div class="contact-strip">
-            <p>Email <a href="mailto:trailiqhelp@pgke.com.au">trailiqhelp@pgke.com.au</a> for Trail IQ support.</p>
+          <div class="support-lead">
+            <div>
+              <strong>Email Trail IQ support</strong>
+              <p><a href="mailto:trailiqhelp@pgke.com.au">trailiqhelp@pgke.com.au</a></p>
+            </div>
             <a class="button" href="mailto:trailiqhelp@pgke.com.au">Email Support</a>
           </div>
           <p>Trail IQ support is email-based and user initiated. The app does not automatically send workout, route, heart-rate, ECG wellness, profile, device, or diagnostic data to support.</p>
@@ -76,27 +88,27 @@
         <section id="checks" class="content-section">
           <h2>Common Checks</h2>
           <div class="checks-grid">
-            <div class="check-card">
+            <div class="check-item">
               <strong>Manage Or Delete Your Data</strong>
               <span>Open Trail IQ &gt; Settings &gt; Privacy &amp; Data to export, import, delete, or reset local app data.</span>
             </div>
-            <div class="check-card">
+            <div class="check-item">
               <strong>Location And Background Workouts</strong>
               <span>For route recording and locked-screen workouts, allow Location access when prompted by iOS.</span>
             </div>
-            <div class="check-card">
+            <div class="check-item">
               <strong>Bluetooth Heart-Rate Monitors</strong>
               <span>Connect a compatible monitor from Settings &gt; Devices and Health for HR-led workouts and wellness tests.</span>
             </div>
-            <div class="check-card">
+            <div class="check-item">
               <strong>Apple Health</strong>
               <span>Review or change Health permissions in the iOS Health app or iOS Settings.</span>
             </div>
-            <div class="check-card">
+            <div class="check-item">
               <strong>ECG Wellness Capture</strong>
               <span>ECG capture requires supported ECG-capable Polar hardware and is for personal wellness review only.</span>
             </div>
-            <div class="check-card">
+            <div class="check-item">
               <strong>Backups And Exports</strong>
               <span>Export a local backup before deleting app data, moving devices, or testing risky flows.</span>
             </div>
@@ -113,5 +125,23 @@
       </div>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/app-icon.png" alt="">
+        <div>
+          <strong>Trail IQ</strong>
+          <span>Support that respects your privacy</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:trailiqhelp@pgke.com.au">Email</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

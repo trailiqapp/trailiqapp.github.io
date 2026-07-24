@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7f9">
   <title>Trail IQ Privacy Policy</title>
-  <link rel="stylesheet" href="assets/site.css">
+  <meta name="description" content="How Trail IQ handles workout, route, heart-rate, wellness and Apple Health data.">
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="assets/site.css?v=4">
 </head>
 <body>
   <nav class="site-nav" aria-label="Trail IQ public site">
@@ -13,14 +16,14 @@
       <span>Trail IQ</span>
     </a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
       <a href="features.html">Features</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
       <a href="support.html">Support</a>
     </div>
   </nav>
 
-  <main>
-    <header class="doc-hero">
+  <header class="doc-hero">
+    <div class="doc-main">
       <div class="doc-heading">
         <img src="assets/app-icon.png" alt="">
         <div>
@@ -29,7 +32,7 @@
           <p class="effective-date">Effective date: May 25, 2026</p>
         </div>
       </div>
-      <p class="hero-copy">Trail IQ is local-first. Workout, route, heart-rate, wellness-test, profile, settings, and comparison data are processed and stored on your device.</p>
+      <p class="doc-lede">Trail IQ is local-first. Workout, route, heart-rate, wellness-test, profile, settings, and comparison data are processed and stored on your device.</p>
 
       <section class="summary-grid" aria-label="Privacy summary">
         <div class="summary-item">
@@ -45,8 +48,10 @@
           <span>Apple Health, exports, and support contact are optional.</span>
         </div>
       </section>
-    </header>
+    </div>
+  </header>
 
+  <main class="doc-main">
     <div class="doc-layout">
       <aside class="toc" aria-label="Privacy policy sections">
         <p class="toc-title">Contents</p>
@@ -76,10 +81,11 @@
 
           <h3>Location And Route Data</h3>
           <p>When you record or import route-capable workouts, Trail IQ may store GPS route points, distance, pace or speed, elevation, saved-route matches, same-route comparisons, and route-aware coaching context.</p>
-          <p>Location access is used during workouts to record routes, distance, pace or speed, elevation, and route-aware coaching context. Background location is used only to continue recording an active workout while the app is backgrounded or the screen is locked.</p>
+          <p>Location access is used during workouts to record routes, distance, pace or speed, elevation, route-aware coaching context, and local weather conditions. Background location is used only to continue recording an active workout while the app is backgrounded or the screen is locked.</p>
+          <p>For newly recorded outdoor workouts, Trail IQ may request current conditions from Apple Weather using WeatherKit. Temperature, feels-like temperature, humidity, wind, and condition snapshots are stored locally with the workout, with Apple Weather attribution. Trail IQ does not send workout or weather data to Trail IQ servers.</p>
 
           <h3>Fitness And Workout Data</h3>
-          <p>Trail IQ stores workout type, start and end time, duration, distance, pace or speed, elevation, calories, route assignments, comparison state, and coaching context for workouts you record, import, or edit.</p>
+          <p>Trail IQ stores workout type, start and end time, duration, distance, pace or speed, elevation, calories, route assignments, comparison state, coaching context, and available weather-condition snapshots for workouts you record, import, or edit.</p>
 
           <h3>Bluetooth Heart-Rate Monitor Data</h3>
           <p>If you connect a compatible Bluetooth heart-rate monitor, Trail IQ may store heart-rate samples, RR interval-derived HRV where available, resting heart-rate test results, ECG wellness traces from supported hardware, and device capability/status information.</p>
@@ -149,5 +155,23 @@
       </div>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/app-icon.png" alt="">
+        <div>
+          <strong>Trail IQ</strong>
+          <span>Local-first outdoor training</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:trailiqhelp@pgke.com.au">Email</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
