@@ -1,11 +1,12 @@
 # Trail IQ Public Website
 
-This repository hosts the public Trail IQ website, privacy policy, and support pages for App Store release.
+This repository hosts the public Trail IQ website, task-based help centre, privacy policy, and support pages for App Store release.
 
 ## Published URLs
 
 - Home: <https://trailiqapp.github.io/>
 - Features: <https://trailiqapp.github.io/features.html>
+- Help: <https://trailiqapp.github.io/help.html>
 - Privacy Policy: <https://trailiqapp.github.io/privacy.html>
 - Support: <https://trailiqapp.github.io/support.html>
 
@@ -25,6 +26,7 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 
 - `index.html` - product landing page built around Trail IQ route memory.
 - `features.html` - visual overview of route comparison, live workouts, results, heart-rate tools, and privacy.
+- `help.html` - plain-language workflows for workouts, routes, ghosts, heart rate, coaching, results, Apple Health, and local data.
 - `privacy.html` - Trail IQ Privacy Policy.
 - `support.html` - Trail IQ Support page.
 - `assets/site.css` - shared styling for the public pages.
