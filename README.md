@@ -25,8 +25,8 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 ## Files
 
 - `index.html` - product landing page built around Trail IQ route memory.
-- `features.html` - visual overview of route comparison, live workouts, results, heart-rate tools, and privacy.
-- `help.html` - plain-language workflows for workouts, routes, ghosts, heart rate, coaching, results, Apple Health, and local data.
+- `features.html` - visual overview of workout import, Route Memory, live workouts, results, heart-rate tools, and privacy.
+- `help.html` - plain-language workflows for workouts, imports, routes, ghosts, heart rate, coaching, results, Apple Health, and local data.
 - `privacy.html` - Trail IQ Privacy Policy.
 - `support.html` - Trail IQ Support page.
 - `assets/site.css` - shared styling for the public pages.
@@ -37,3 +37,5 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 ## Release Notes
 
 Trail IQ is positioned as a local-first fitness and wellness app. The public pages should continue to avoid diagnostic claims, broad unsupported sensor claims, analytics/tracking claims, or any wording that suggests Trail IQ uploads personal health data to Trail IQ servers.
+
+The current product copy and screenshots describe Trail IQ 1.0.2. Keep public feature claims aligned with the released app before publishing future website changes.

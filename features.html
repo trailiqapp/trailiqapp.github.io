@@ -7,7 +7,7 @@
   <title>Trail IQ Features | Learn from every route</title>
   <meta name="description" content="Explore Trail IQ route memory, live ghost comparison, workout results, heart-rate tools and local-first privacy.">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=5">
+  <link rel="stylesheet" href="assets/site.css?v=6">
 </head>
 <body>
   <nav class="site-nav on-dark" aria-label="Trail IQ public site">
@@ -38,21 +38,39 @@
           <div class="feature-copy">
             <p class="eyebrow">Route memory</p>
             <h2>A route becomes more useful every time you return.</h2>
-            <p>Save a route or let Trail IQ recognise a familiar path. Repeat it with the same workout type and Trail IQ can compare your performance without mixing walks, runs and rides.</p>
+            <p>Save a route, import earlier workouts or let Trail IQ recognise a familiar path. Repeat it with the same workout type and Route Memory learns the route without mixing walks, runs and rides.</p>
             <ul>
               <li>Saved routes and automatic route matching</li>
+              <li>Best, latest and typical times for familiar routes</li>
+              <li>Recurring slow sections and strong finishes</li>
               <li>Same-route comparison against a matching workout</li>
-              <li>Time gained and lost by route section</li>
-              <li>Route history and repeat-attempt trends</li>
               <li>Clear handling of new and partially matched routes</li>
             </ul>
           </div>
           <figure class="single-screen">
-            <img src="assets/screen-replay.png" alt="Route Replay showing a completed route with gain and loss markers.">
+            <img src="assets/screen-comparison.png" alt="Route Comparison showing time and section changes against an earlier effort.">
           </figure>
         </article>
 
         <article class="feature-detail reverse">
+          <div class="feature-copy">
+            <p class="eyebrow">Workout import</p>
+            <h2>Bring useful history with you.</h2>
+            <p>Import supported workout files to build route history before recording everything again. Trail IQ normalises the data, checks for duplicates and preserves richer details when they are available.</p>
+            <ul>
+              <li>GPX, TCX and FIT workout files</li>
+              <li>Supported Adidas Running export archives</li>
+              <li>Duplicate prevention and existing-workout enrichment</li>
+              <li>Automatic familiar-route discovery after import</li>
+              <li>Trail IQ backup import and restore remain separate</li>
+            </ul>
+          </div>
+          <figure class="single-screen">
+            <img src="assets/screen-replay.png" alt="Route Replay showing a real imported or recorded route on the map.">
+          </figure>
+        </article>
+
+        <article class="feature-detail">
           <div class="feature-copy">
             <p class="eyebrow">Live workout</p>
             <h2>Know where you are and what the route still asks of you.</h2>
@@ -62,6 +80,7 @@
               <li>Configurable live distance, pace, speed and elevation</li>
               <li>Remaining distance to an assigned route end</li>
               <li>Optional automatic finish at the route end</li>
+              <li>Pre-workout lookahead informed by route history</li>
               <li>Live ghost against a recent, best or selected effort</li>
             </ul>
           </div>
@@ -70,21 +89,22 @@
           </figure>
         </article>
 
-        <article class="feature-detail">
+        <article class="feature-detail reverse">
           <div class="feature-copy">
             <p class="eyebrow">Workout result</p>
             <h2>See the answer first. Open the detail when it matters.</h2>
-            <p>The Workout Result brings the route story, comparison and key numbers together. Focused reports then explain pace, speed, elevation, heart rate, zones, splits and workout HRV when that data is available.</p>
+            <p>The Workout Result brings the route story, comparison and key numbers together. Three consistent reports keep related information together and avoid repeating the same statistics across several screens.</p>
             <ul>
               <li>Comparison rings for today and the previous matching effort</li>
-              <li>Route Replay and Where It Changed analysis</li>
+              <li>Pace &amp; Splits or Speed &amp; Splits</li>
+              <li>Effort &amp; Heart Rate when relevant data exists</li>
+              <li>Terrain &amp; Conditions with available weather context</li>
+              <li>Route Comparison and Route Replay</li>
               <li>Coach Review with a practical next step</li>
-              <li>Terrain and available weather context</li>
-              <li>Results trends and relevant fitness snapshots</li>
             </ul>
           </div>
           <figure class="single-screen">
-            <img src="assets/screen-result.png" alt="Trail IQ Workout Result with comparison rings and route-aware summary.">
+            <img src="assets/screen-highlights.png" alt="Trail IQ Result Highlights grouped into pace, effort and terrain reports.">
           </figure>
         </article>
 
@@ -97,7 +117,7 @@
               <li>Personalised or custom heart-rate zones</li>
               <li>Heart-rate-led recovery, aerobic and hard-effort goals</li>
               <li>Workout HRV when compatible beat-to-beat data is available</li>
-              <li>Optional route, segment and effort tones and haptics</li>
+              <li>Optional route, segment and effort tones, haptics and short spoken cues</li>
               <li>Resting heart-rate readings from a connected monitor</li>
             </ul>
             <p>Trail IQ presents heart-rate and HRV information as fitness context, without medical diagnosis or treatment guidance.</p>

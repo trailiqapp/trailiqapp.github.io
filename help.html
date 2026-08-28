@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f7f9">
   <title>Trail IQ Help | Simple guides</title>
-  <meta name="description" content="Simple step-by-step guides for workouts, routes, live ghosts, heart-rate monitors, coaching cues, results, Apple Health and backups in Trail IQ.">
+  <meta name="description" content="Simple step-by-step guides for workouts, imports, routes, Route Memory, live ghosts, heart-rate monitors, coaching cues, results, Apple Health and backups in Trail IQ.">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=5">
+  <link rel="stylesheet" href="assets/site.css?v=6">
 </head>
 <body>
   <nav class="site-nav" aria-label="Trail IQ public site">
@@ -148,7 +148,7 @@
           <ol class="workflow-steps">
             <li><span>1</span><p>Choose or automatically match the route, then complete the workout normally.</p></li>
             <li><span>2</span><p>Open the saved <strong>Workout Result</strong>.</p></li>
-            <li><span>3</span><p>Tap <strong>Workout Result</strong> for the direct comparison, or <strong>Where It Changed</strong> to see the sections where time was gained or lost.</p></li>
+            <li><span>3</span><p>Open <strong>Route Comparison</strong> to see the direct result and the route sections where time changed.</p></li>
             <li><span>4</span><p>Open <strong>Route Replay</strong> to view the route, overlays and finish context on the map.</p></li>
           </ol>
           <div class="workflow-outcome">
@@ -222,19 +222,21 @@
         <div class="workflow-body">
           <div class="workflow-intro">
             <h3>Before you start</h3>
-            <p>Wear or activate the monitor and make sure Bluetooth is enabled on your iPhone.</p>
+            <p>Wear or activate the monitor and make sure Bluetooth is enabled on your iPhone. Some monitors must also be configured to share their live heart-rate feed with other apps.</p>
           </div>
           <ol class="workflow-steps">
-            <li><span>1</span><p>Open <strong>Settings</strong>, then <strong>Devices &amp; Health</strong>.</p></li>
-            <li><span>2</span><p>Tap <strong>Manage Devices</strong>, then scan for monitors.</p></li>
-            <li><span>3</span><p>Select your monitor when it appears and wait for <strong>Connected</strong>.</p></li>
-            <li><span>4</span><p>Return to the start screen and confirm that the monitor pill shows live heart rate instead of <strong>No monitor</strong>.</p></li>
+            <li><span>1</span><p>Open the monitor manufacturer's app. If available, enable <strong>Broadcast Heart Rate</strong>, <strong>HR Sharing</strong>, <strong>Share with Other Apps</strong>, or <strong>Dual Bluetooth</strong>. The exact name varies by brand.</p></li>
+            <li><span>2</span><p>In Trail IQ, open <strong>Settings</strong>, then <strong>Devices &amp; Health</strong>.</p></li>
+            <li><span>3</span><p>Tap <strong>Manage Devices</strong>, then scan for monitors.</p></li>
+            <li><span>4</span><p>Select your monitor when it appears and wait for <strong>Connected</strong>.</p></li>
+            <li><span>5</span><p>Return to the start screen and confirm that the monitor pill shows live heart rate instead of <strong>No monitor</strong>.</p></li>
           </ol>
           <div class="workflow-outcome">
             <strong>What you will see</strong>
             <p>Live beats per minute, a heart-rate zone and heart-rate goal choices. Workout HRV appears later only when the monitor supplies compatible beat-to-beat intervals.</p>
           </div>
           <div class="workflow-note"><strong>Shortcut:</strong> Tapping the <strong>No monitor</strong> pill opens Manage Devices.</div>
+          <div class="workflow-note"><strong>Monitor works in its own app but not Trail IQ?</strong> Check that heart-rate sharing or broadcasting is enabled. Some monitors allow only one app connection at a time, so close the other fitness app or enable a second Bluetooth channel if the monitor supports one.</div>
         </div>
       </details>
 
@@ -264,8 +266,8 @@
         <p class="help-number">04</p>
         <div>
           <p class="eyebrow">Coaching cues</p>
-          <h2>Know what the tones are telling you</h2>
-          <p>Short tones provide useful prompts without talking over your music or asking you to read the screen.</p>
+          <h2>Know what the cues are telling you</h2>
+          <p>Choose distinct tones or tones followed by short spoken guidance. Both are designed to mix with music or podcasts.</p>
         </div>
       </div>
 
@@ -277,10 +279,10 @@
         <div class="workflow-body">
           <ol class="workflow-steps">
             <li><span>1</span><p>Open <strong>Settings</strong>, then <strong>Coaching &amp; Heart Rate</strong>.</p></li>
-            <li><span>2</span><p>Turn on <strong>Route Guidance</strong> if you want prompts based on the selected route.</p></li>
-            <li><span>3</span><p>Turn on <strong>Segment Cues</strong> if you want cues when the route changes character.</p></li>
-            <li><span>4</span><p>Under <strong>Cue Frequency</strong>, choose <strong>Low</strong>, <strong>Standard</strong>, or <strong>Frequent</strong>.</p></li>
-            <li><span>5</span><p>Start a workout with a route, heart-rate goal, or both.</p></li>
+            <li><span>2</span><p>Set <strong>Coaching Output</strong> to tones, or to tones with spoken guidance.</p></li>
+            <li><span>3</span><p>Turn on <strong>Route Guidance</strong> for prompts based on the selected route.</p></li>
+            <li><span>4</span><p>Turn on <strong>Segment Cues</strong> for climbs, recovery sections and upcoming sections when enough route history exists.</p></li>
+            <li><span>5</span><p>Choose a <strong>Cue Frequency</strong> of <strong>Low</strong>, <strong>Standard</strong>, or <strong>Frequent</strong>, then use <strong>Preview Coaching Audio</strong> to hear the selected output.</p></li>
           </ol>
           <div class="cue-table" role="table" aria-label="Coaching tone meanings">
             <div class="cue-row cue-heading" role="row"><span role="columnheader">What you hear</span><span role="columnheader">What it means</span><span role="columnheader">What to do</span></div>
@@ -307,7 +309,7 @@
 
       <div class="help-visual-pair">
         <figure><img src="assets/screen-result.png" alt="Workout Result with route summary and key comparison rings."><figcaption>Workout Result</figcaption></figure>
-        <figure><img src="assets/screen-replay.png" alt="Route Replay map showing comparison markers over the route."><figcaption>Route Replay</figcaption></figure>
+        <figure><img src="assets/screen-highlights.png" alt="Result Highlights grouped into pace, effort and terrain reports."><figcaption>Result Highlights</figcaption></figure>
       </div>
 
       <details class="workflow" open>
@@ -332,14 +334,14 @@
 
       <details class="workflow">
         <summary>
-          <span>Use Route Replay and Where It Changed</span>
-          <small>Move from the overview to the route story</small>
+          <span>Use Route Comparison and Route Replay</span>
+          <small>Move from the answer to the route story</small>
         </summary>
         <div class="workflow-body">
           <ol class="workflow-steps">
-            <li><span>1</span><p>Tap <strong>Route Replay</strong> to open the completed route at a useful map scale.</p></li>
-            <li><span>2</span><p>Choose the route, comparison, pace, heart-rate or elevation overlay when that data exists.</p></li>
-            <li><span>3</span><p>Tap <strong>Where It Changed</strong> to see the route sections that most affected the result.</p></li>
+            <li><span>1</span><p>Open <strong>Route Comparison</strong> to see the overall time difference and largest section changes.</p></li>
+            <li><span>2</span><p>Tap <strong>Route Replay</strong> to open the completed route at a useful map scale.</p></li>
+            <li><span>3</span><p>Choose the route, comparison, pace, heart-rate or elevation overlay when that data exists.</p></li>
             <li><span>4</span><p>Use <strong>Route History</strong> when the route has multiple matching attempts.</p></li>
           </ol>
           <div class="workflow-note"><strong>Comparison missing?</strong> The assigned route still appears, but a direct comparison needs an earlier workout of the same activity type on that route.</div>
@@ -375,6 +377,27 @@
             <p>Trail IQ shows what is available for import and merges recognised duplicates rather than deliberately creating another copy.</p>
           </div>
           <div class="workflow-note"><strong>Important:</strong> Requesting permission alone does not import workouts.</div>
+        </div>
+      </details>
+
+      <details class="workflow">
+        <summary>
+          <span>Import workout files</span>
+          <small>GPX, TCX, FIT and supported Adidas exports</small>
+        </summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Open <strong>Settings</strong>, then <strong>Privacy &amp; Data</strong>.</p></li>
+            <li><span>2</span><p>Under <strong>Imports</strong>, choose <strong>Import GPX, TCX or FIT Workouts</strong>, or choose <strong>Import Adidas Running Export</strong> for a supported Adidas archive.</p></li>
+            <li><span>3</span><p>Select the file in the iOS file picker and review the import summary.</p></li>
+            <li><span>4</span><p>Confirm the import. Trail IQ normalises supported data and checks for an existing workout before adding another copy.</p></li>
+            <li><span>5</span><p>Open Results or Routes to review imported workouts and any familiar routes they reveal.</p></li>
+          </ol>
+          <div class="workflow-outcome">
+            <strong>What you will see</strong>
+            <p>A summary of workouts added, skipped as duplicates, or enriched with useful details that were missing from an existing record.</p>
+          </div>
+          <div class="workflow-note"><strong>Different kind of file?</strong> A Trail IQ backup restores Trail IQ data and settings. It is not the same as importing individual workout files.</div>
         </div>
       </details>
 
