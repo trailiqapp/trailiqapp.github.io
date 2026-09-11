@@ -33,8 +33,8 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 
 ## Files
 
-- `index.html` - product landing page built around Trail IQ route memory.
-- `features.html` - visual overview of workout import, Route Memory, live workouts, results, heart-rate tools, and privacy.
+- `index.html` - product landing page organised around the plan, move, learn, and return journey.
+- `features.html` - before/during/after overview of Route Memory 2.0, structured workouts, training context, practical navigation, coaching, sensors, results, portability, and privacy.
 - `guides/index.html` - practical route, pacing and effort guide collection.
 - `guides/same-route-vs-average-pace/index.html` - why repeated-route context is more informative than one average.
 - `guides/fastest-run-vs-best-executed-run/index.html` - how outcome, execution and workout intent differ.
@@ -43,7 +43,7 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 - `private-running-app/index.html` - local-first private training without an account or social feed.
 - `no-subscription-running-app/index.html` - Full Access and the one-time purchase model.
 - `bluetooth-heart-rate-running-app/index.html` - compatible BLE monitors, live zones, workout HRV and route context.
-- `help.html` - plain-language workflows and FAQs for workouts, imports, routes, ghosts, heart rate, coaching, results, Apple Health, and local data.
+- `help.html` - plain-language workflows and FAQs for workouts, route lookahead, structured sessions, ghosts, heart rate and movement sensors, coaching, training context, imports, exports, Apple Health, and local data.
 - `privacy.html` - Trail IQ Privacy Policy.
 - `support.html` - Trail IQ Support page.
 - `robots.txt` - crawler access and sitemap location.
@@ -57,4 +57,4 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 
 Trail IQ is positioned as a local-first fitness and wellness app. The public pages should continue to avoid diagnostic claims, broad unsupported sensor claims, analytics/tracking claims, or any wording that suggests Trail IQ uploads personal health data to Trail IQ servers.
 
-The current product copy and screenshots describe Trail IQ 1.0.2. Keep public feature claims aligned with the released app before publishing future website changes.
+The offline product copy and screenshots currently describe the Trail IQ 1.1.0 (250) release candidate. Keep these changes local until the corresponding app version is ready to publish.

@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f7f9">
   <title>Trail IQ Help and FAQ | Simple guides</title>
-  <meta name="description" content="Simple Trail IQ guides and answers about workouts, imports, Route Memory, Ghost, heart-rate monitors, coaching, privacy, Full Access and local data.">
+  <meta name="description" content="Simple Trail IQ guides for workouts, routes, structured sessions, sensors, imports, exports, coaching, privacy and Full Access.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://trailiqapp.github.io/help.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Trail IQ">
   <meta property="og:title" content="Trail IQ Help and FAQ | Simple guides">
-  <meta property="og:description" content="Practical Trail IQ guides plus clear answers about routes, heart rate, privacy, imports and Full Access.">
+  <meta property="og:description" content="Practical Trail IQ guides for routes, structured sessions, sensors, coaching, results, recovery context and local data.">
   <meta property="og:url" content="https://trailiqapp.github.io/help.html">
   <meta property="og:image" content="https://trailiqapp.github.io/assets/screen-home.png">
   <meta property="og:image:alt" content="Trail IQ outdoor workout start screen.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Trail IQ Help and FAQ | Simple guides">
-  <meta name="twitter:description" content="Practical Trail IQ guides plus clear answers about routes, heart rate, privacy, imports and Full Access.">
+  <meta name="twitter:description" content="Practical Trail IQ guides for routes, structured sessions, sensors, coaching, results, recovery context and local data.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-home.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=10">
+  <link rel="stylesheet" href="assets/site.css?v=11">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -64,6 +64,30 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. Trail IQ supports GPX, TCX and FIT workout files, supported Adidas Running export archives and optional user-initiated Apple Health import."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Trail IQ create structured workouts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can use a quick-start session or build reusable warm-up, work, recovery, repeat and cool-down steps using time, distance or manual completion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Training Load and Recovery Context?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Training Load compares seven days of workout load with the preceding 28-day weekly average. Optional Recovery Context compares fresh permitted Apple Health resting heart rate, HRV and sleep data with your own recent ranges when enough history exists."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Trail IQ export an individual workout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A completed workout can be shared as GPX when route data exists or as TCX through the standard iOS share sheet."
         }
       },
       {
@@ -117,8 +141,9 @@
         <p class="lede">Short, practical guides using the same words and controls you see in the app.</p>
         <div class="help-quick-links" aria-label="Help categories">
           <a href="#start">Start a workout</a>
+          <a href="#start">Build a session</a>
           <a href="#routes">Use routes</a>
-          <a href="#heart-rate">Connect heart rate</a>
+          <a href="#heart-rate">Connect sensors</a>
           <a href="#coaching">Understand cues</a>
           <a href="#results">Read results</a>
           <a href="#data">Manage data</a>
@@ -166,6 +191,28 @@
           <div class="workflow-note"><strong>Good to know:</strong> Discarding stops the workout without saving it to Trail IQ or Apple Health.</div>
         </div>
       </details>
+
+      <details class="workflow">
+        <summary>
+          <span>Choose or build a structured session</span>
+          <small>Warm-up, work, recovery and cool-down</small>
+        </summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Choose the activity on the start screen, then tap <strong>Session</strong>.</p></li>
+            <li><span>2</span><p>Choose a session under <strong>Quick Start</strong>, select a saved session, or tap the plus button to create one.</p></li>
+            <li><span>3</span><p>When building, add warm-up, work, recovery or cool-down steps. Set each step by time or distance and add a target only when you need one.</p></li>
+            <li><span>4</span><p>Save and select the session, then start the workout normally.</p></li>
+            <li><span>5</span><p>Follow the current step and remaining time or distance. Use the skip control when it is sensible to move on.</p></li>
+          </ol>
+          <div class="workflow-outcome">
+            <strong>What you will see</strong>
+            <p>The current step, target and progress during the workout, with haptic and optional audio cues when steps change.</p>
+          </div>
+          <div class="workflow-note"><strong>Sensor targets:</strong> Heart-rate-zone and cycling-power targets are available only when the required sensor is connected.</div>
+          <div class="workflow-note"><strong>Using a familiar route:</strong> Trail IQ may show where a hard step meets a known climb or route section. This is advice only; it does not move or rewrite your session steps.</div>
+        </div>
+      </details>
     </section>
 
     <section id="routes" class="help-section">
@@ -205,13 +252,33 @@
 
       <details class="workflow">
         <summary>
+          <span>Read what is coming on a familiar route</span>
+          <small>Climbs, recoveries and personal patterns</small>
+        </summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Select a saved route with several comparable workouts of the same activity type.</p></li>
+            <li><span>2</span><p>Open the route briefing before starting and look for <strong>Coming Up</strong>.</p></li>
+            <li><span>3</span><p>Read the route facts first, then any personal history explaining where you often slow, recover or finish strongly.</p></li>
+            <li><span>4</span><p>Use the suggestion as context for today’s workout rather than a compulsory target.</p></li>
+          </ol>
+          <div class="workflow-outcome">
+            <strong>What you will see</strong>
+            <p>A short ranked list of meaningful upcoming sections. Trail IQ does not show every bend or every small pace change.</p>
+          </div>
+          <div class="workflow-note"><strong>Not enough history?</strong> Trail IQ may show neutral terrain context or nothing at all. Personal wording appears only when enough comparable efforts support it.</div>
+        </div>
+      </details>
+
+      <details class="workflow">
+        <summary>
           <span>Save and reuse a completed route</span>
           <small>Turn a recorded path into a named route</small>
         </summary>
         <div class="workflow-body">
           <ol class="workflow-steps">
             <li><span>1</span><p>Finish a workout that recorded a GPS route.</p></li>
-            <li><span>2</span><p>On the Workout Result, tap <strong>Save &amp; Set Route</strong>.</p></li>
+            <li><span>2</span><p>On the Workout Result, tap <strong>Save Route</strong>.</p></li>
             <li><span>3</span><p>Give the route a short name you will recognise.</p></li>
             <li><span>4</span><p>Next time, open <strong>Choose Route</strong> and select it from your saved routes.</p></li>
           </ol>
@@ -290,15 +357,16 @@
           <div class="workflow-note"><strong>Good to know:</strong> Stopping briefly near the finish should not end the workout on its own.</div>
         </div>
       </details>
+
     </section>
 
     <section id="heart-rate" class="help-section">
       <div class="help-section-heading">
         <p class="help-number">03</p>
         <div>
-          <p class="eyebrow">Heart rate</p>
-          <h2>Connect a monitor and choose your effort</h2>
-          <p>Heart-rate features appear when a compatible monitor is connected and sending data.</p>
+          <p class="eyebrow">Heart rate and sensors</p>
+          <h2>Connect only the data you use</h2>
+          <p>Heart rate, cycling metrics and running cadence appear only when compatible hardware and permissions provide them.</p>
           <p><a href="bluetooth-heart-rate-running-app/index.html">See how Trail IQ combines Bluetooth heart rate with route context.</a></p>
         </div>
       </div>
@@ -348,6 +416,39 @@
           <div class="workflow-note"><strong>No monitor connected:</strong> Trail IQ hides heart-rate goals rather than showing an option that cannot work.</div>
         </div>
       </details>
+
+      <details class="workflow">
+        <summary>
+          <span>Connect cycling sensors</span>
+          <small>Wheel speed, cadence and power</small>
+        </summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Wake the sensor, then open <strong>Settings</strong>, <strong>Devices &amp; Health</strong>, and <strong>Manage Devices</strong>.</p></li>
+            <li><span>2</span><p>Tap <strong>Scan for Sensors</strong> and connect the cycling speed/cadence or cycling power device.</p></li>
+            <li><span>3</span><p>For wheel-derived speed and distance, enter the wheel circumference shown under <strong>Cycling Wheel</strong>.</p></li>
+            <li><span>4</span><p>For power zones, enter a measured FTP under <strong>Cycling Power</strong>.</p></li>
+            <li><span>5</span><p>Choose Cycling on the start screen. Available speed, cadence and power tiles appear as live metric choices.</p></li>
+          </ol>
+          <div class="workflow-note"><strong>Running cadence:</strong> For supported running activities, cadence comes from iPhone Motion permission rather than a cycling sensor.</div>
+        </div>
+      </details>
+
+      <details class="workflow">
+        <summary>
+          <span>Show running cadence and active steps</span>
+          <small>Supported iPhone Motion data</small>
+        </summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Choose <strong>Running</strong> on a supported iPhone and allow Motion &amp; Fitness access when asked.</p></li>
+            <li><span>2</span><p>Open the live metric picker and select <strong>Run Cadence</strong> when it is available.</p></li>
+            <li><span>3</span><p>Start moving and allow a short moment for iPhone Motion to establish a current reading.</p></li>
+            <li><span>4</span><p>After the workout, open <strong>Pace &amp; Splits</strong> to review average cadence, peak cadence, active steps and source.</p></li>
+          </ol>
+          <div class="workflow-note"><strong>If it is missing:</strong> Check Motion &amp; Fitness permission in iOS Settings. Trail IQ does not estimate running cadence from GPS when real Motion data is unavailable.</div>
+        </div>
+      </details>
     </section>
 
     <section id="coaching" class="help-section">
@@ -378,9 +479,12 @@
             <div class="cue-row" role="row"><span role="cell"><strong>Rising tone</strong></span><span role="cell">Effort is below the selected range</span><span role="cell">Increase effort gradually</span></div>
             <div class="cue-row" role="row"><span role="cell"><strong>Falling tone</strong></span><span role="cell">Effort is above the selected range</span><span role="cell">Ease back gradually</span></div>
             <div class="cue-row" role="row"><span role="cell"><strong>Balanced confirmation</strong></span><span role="cell">Effort has returned to the intended range</span><span role="cell">Hold your current effort</span></div>
-            <div class="cue-row" role="row"><span role="cell"><strong>Route or segment cue</strong></span><span role="cell">A route milestone or different section is near</span><span role="cell">Check the map or adjust for the section</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Section-ahead cue</strong></span><span role="cell">A meaningful route section is approaching</span><span role="cell">Listen for the route fact or supported personal action</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Step transition cue</strong></span><span role="cell">A structured workout step is starting or nearly complete</span><span role="cell">Follow the named step and target shown on screen</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Route-attention cue</strong></span><span role="cell">The route was only partly matched or you moved off it</span><span role="cell">Check the map; personal route guidance becomes limited</span></div>
             <div class="cue-row" role="row"><span role="cell"><strong>Completion tone</strong></span><span role="cell">The route or workout has finished</span><span role="cell">Review the saved result when safe</span></div>
           </div>
+          <div class="workflow-note"><strong>How personal should it sound?</strong> Trail IQ may give a route fact, add your supported history, or relate the section to today’s execution. It uses only the highest level the available route and workout evidence supports.</div>
           <div class="workflow-note"><strong>Good to know:</strong> Cues mix with existing audio instead of stopping it. iOS must allow the workout and audio session to continue while the phone is locked.</div>
         </div>
       </details>
@@ -423,6 +527,27 @@
 
       <details class="workflow">
         <summary>
+          <span>Read Training Load and Recovery Context</span>
+          <small>Recent work and optional personal signals</small>
+        </summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Open <strong>Results</strong> and find <strong>Training Load</strong>.</p></li>
+            <li><span>2</span><p>Read the seven-day load beside the weekly average from the preceding 28 days.</p></li>
+            <li><span>3</span><p>Check the explanation for workout count, recent hard sessions, recovery gap and whether intensity came from heart-rate zones, workout goals or both.</p></li>
+            <li><span>4</span><p>If Apple Health is enabled and enough fresh history exists, read <strong>Recovery Context</strong> for resting heart rate, HRV and sleep against your own recent ranges.</p></li>
+            <li><span>5</span><p>Treat the suggested day as fitness context, not a medical assessment or compulsory plan.</p></li>
+          </ol>
+          <div class="workflow-outcome">
+            <strong>What you will see</strong>
+            <p>Low, Normal, Elevated or Building baseline for training load, plus only the recovery signals that are fresh and supported by enough personal history.</p>
+          </div>
+          <div class="workflow-note"><strong>Nothing showing?</strong> Training Load needs recent completed workouts. Recovery Context also needs permission, a fresh reading and at least three earlier personal readings for that signal.</div>
+        </div>
+      </details>
+
+      <details class="workflow">
+        <summary>
           <span>Use Route Comparison and Route Replay</span>
           <small>Move from the answer to the route story</small>
         </summary>
@@ -443,8 +568,8 @@
         <p class="help-number">06</p>
         <div>
           <p class="eyebrow">Your data</p>
-          <h2>Use Apple Health and local backups</h2>
-          <p>Trail IQ keeps these actions separate so granting access never silently imports an entire workout history.</p>
+          <h2>Use Apple Health, files and local backups</h2>
+          <p>Trail IQ keeps permissions, workout imports, individual exports and full backups separate so each action remains deliberate.</p>
           <p><a href="private-running-app/index.html">Learn how Trail IQ keeps personal training local-first and free from a social feed.</a></p>
         </div>
       </div>
@@ -510,6 +635,22 @@
 
       <details class="workflow">
         <summary>
+          <span>Export one workout</span>
+          <small>Share a GPX or TCX file</small>
+        </summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Open <strong>Results</strong>, then select the workout you want to take elsewhere.</p></li>
+            <li><span>2</span><p>Open the more menu and choose <strong>Export Workout</strong>.</p></li>
+            <li><span>3</span><p>Choose <strong>GPX Route + Sensors</strong> for a route-focused file or <strong>TCX Workout + Sensors</strong> for a workout-focused file.</p></li>
+            <li><span>4</span><p>Use the iOS share sheet to save or send the file.</p></li>
+          </ol>
+          <div class="workflow-note"><strong>Privacy:</strong> Exported files may contain precise route and sensor data. You choose where they go.</div>
+        </div>
+      </details>
+
+      <details class="workflow">
+        <summary>
           <span>Unlock or restore Full Access</span>
           <small>One purchase, no recurring subscription</small>
         </summary>
@@ -540,7 +681,7 @@
         <div>
           <p class="eyebrow">Frequently asked questions</p>
           <h2>Quick answers about Trail IQ</h2>
-          <p>The essentials about routes, privacy, imports, heart rate and Full Access.</p>
+          <p>The essentials about routes, sessions, sensors, training context, privacy and Full Access.</p>
         </div>
       </div>
 
@@ -567,6 +708,21 @@
       <details class="workflow">
         <summary><span>Can Trail IQ import old workouts?</span><small>GPX, TCX, FIT and more</small></summary>
         <div class="workflow-body"><div class="workflow-intro"><p>Yes. Trail IQ supports GPX, TCX and FIT workout files, supported Adidas Running export archives and optional user-initiated Apple Health import. Import checks help prevent duplicate workouts.</p></div></div>
+      </details>
+
+      <details class="workflow">
+        <summary><span>Can Trail IQ create structured workouts?</span><small>Quick starts or your own session</small></summary>
+        <div class="workflow-body"><div class="workflow-intro"><p>Yes. Use a quick-start session or build reusable warm-up, work, recovery, repeat and cool-down steps using time, distance or manual completion. Supported sensor targets appear only when the required device is available.</p></div></div>
+      </details>
+
+      <details class="workflow">
+        <summary><span>What are Training Load and Recovery Context?</span><small>Transparent recent context</small></summary>
+        <div class="workflow-body"><div class="workflow-intro"><p>Training Load compares the last seven days with the weekly average from the preceding 28 days and explains its inputs. Optional Recovery Context compares fresh permitted Apple Health resting heart rate, HRV and sleep data with your own recent ranges when enough history exists. Neither is a medical or opaque readiness score.</p></div></div>
+      </details>
+
+      <details class="workflow">
+        <summary><span>Can Trail IQ export an individual workout?</span><small>GPX or TCX through iOS</small></summary>
+        <div class="workflow-body"><div class="workflow-intro"><p>Yes. A completed workout can be shared as GPX when route data exists or as TCX through the standard iOS share sheet. A Trail IQ backup remains a separate full-data action.</p></div></div>
       </details>
 
       <details class="workflow">

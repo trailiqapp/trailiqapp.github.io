@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="How Trail IQ handles workout, route, heart-rate, wellness and optional Apple Health data.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/app-icon.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=10">
+  <link rel="stylesheet" href="assets/site.css?v=11">
 </head>
 <body>
   <nav class="site-nav" aria-label="Trail IQ public site">
@@ -44,10 +44,10 @@
         <div>
           <p class="eyebrow">Trail IQ</p>
           <h1>Privacy Policy</h1>
-          <p class="effective-date">Effective date: May 25, 2026</p>
+          <p class="effective-date">Effective date: September 11, 2026</p>
         </div>
       </div>
-      <p class="doc-lede">Trail IQ is local-first. Workout, route, heart-rate, wellness-test, profile, settings, and comparison data are processed and stored on your device.</p>
+      <p class="doc-lede">Trail IQ is local-first. Workout, route, sensor, structured-session, wellness-test, profile, settings, and comparison data are processed and stored on your device.</p>
 
       <section class="summary-grid" aria-label="Privacy summary">
         <div class="summary-item">
@@ -86,7 +86,7 @@
         <section id="overview" class="content-section">
           <h2>Overview</h2>
           <p>Trail IQ is a local-first fitness app for walking, running, cycling, and similar outdoor workouts.</p>
-          <p>Trail IQ stores workout, route, heart-rate, HRV where available, resting heart-rate, saved route, profile, settings, and comparison data locally on your device. If you choose to connect Apple Health, Trail IQ can read and write supported workout and health data through Apple Health with your permission. Trail IQ does not upload your health data to Trail IQ servers and does not store personal health information in iCloud.</p>
+          <p>Trail IQ stores workout, structured-session, route, heart-rate, HRV where available, running cadence and steps where available, cycling-sensor, resting heart-rate, saved route, profile, settings, and comparison data locally on your device. If you choose to connect Apple Health, Trail IQ can read and write supported workout and health data through Apple Health with your permission. Trail IQ does not upload your health data to Trail IQ servers and does not store personal health information in iCloud.</p>
           <p>Trail IQ does not use third-party advertising, does not track you across apps or websites, and does not sell your data.</p>
         </section>
 
@@ -101,10 +101,14 @@
 
           <h3>Fitness And Workout Data</h3>
           <p>Trail IQ stores workout type, start and end time, duration, distance, pace or speed, elevation, calories, route assignments, comparison state, coaching context, and available weather-condition snapshots for workouts you record, import, or edit.</p>
+          <p>Saved structured workout plans and restorable progress for an underway plan are stored locally. Route context shown beside a planned step is calculated on device and does not alter the saved plan.</p>
 
           <h3>Bluetooth Heart-Rate Monitor Data</h3>
           <p>If you connect a compatible Bluetooth heart-rate monitor, Trail IQ may store heart-rate samples, RR interval-derived HRV where available, resting heart-rate test results, and device capability/status information.</p>
           <p>Heart-rate-led workouts, HRV where available, resting heart-rate tests, and richer heart-rate coaching require a connected Bluetooth heart-rate monitor.</p>
+
+          <h3>Movement And Cycling Sensor Data</h3>
+          <p>For supported running workouts, Trail IQ may use iPhone Motion data to calculate and store cadence. If you connect compatible Bluetooth cycling sensors, Trail IQ may store wheel-derived speed and distance, cycling cadence, cycling power, sensor capability and battery information, and the wheel or FTP values you choose to enter.</p>
 
           <h3>Profile Data</h3>
           <p>If you enter profile values or import them from Apple Health, Trail IQ may store values such as birth date or age, biological sex, height, weight, resting heart rate, max heart rate, and heart-rate zone preferences.</p>
@@ -114,14 +118,14 @@
         <section id="apple-health" class="content-section">
           <h2>Apple Health</h2>
           <p>Apple Health integration is optional and uses HealthKit permissions controlled by iOS.</p>
-          <p>With your permission, Trail IQ can read supported workout and health data from Apple Health. Trail IQ can also save completed workouts and supported samples back to Apple Health when enabled.</p>
+          <p>With your permission, Trail IQ can read supported workout and health data from Apple Health, including available resting heart rate, heart-rate variability and sleep information used for recovery context. Recovery readings are compared on device and are not imported into Trail IQ's stored history. Trail IQ can also save completed workouts and supported samples back to Apple Health when enabled.</p>
           <p>You can manage Apple Health permissions at any time in the iOS Health app or iOS Settings.</p>
         </section>
 
         <section id="backup-export" class="content-section">
           <h2>Backup, Export, And Sharing</h2>
           <p>Backup, export, import, and share actions are user initiated through iOS document and share flows.</p>
-          <p>Exports may include private workout, route, heart-rate, health-test, profile, settings, and comparison data. You choose when and where exported files are shared or stored.</p>
+          <p>Exports may include private workout, route, heart-rate, movement, cycling-sensor, structured-session, health-test, profile, settings, weather-condition, and comparison data. Individual workouts can also be shared as GPX or TCX files. You choose when and where exported files are shared or stored.</p>
         </section>
 
         <section id="icloud" class="content-section">
@@ -139,14 +143,14 @@
 
         <section id="developer" class="content-section">
           <h2>Data Collection By The Developer</h2>
-          <p>Trail IQ is local-first. The developer does not receive your workout, route, heart-rate, HRV, resting heart-rate, profile, settings, Apple Health, or route-comparison data through the app.</p>
+          <p>Trail IQ is local-first. The developer does not receive your workout, route, sensor, structured-session, heart-rate, HRV, resting heart-rate, profile, settings, Apple Health, or route-comparison data through the app.</p>
           <p>If you contact support by email, the developer will receive the information you choose to include in that message.</p>
           <p>Trail IQ does not require an account. Because your app data is stored locally on your device, support cannot remotely view, change, export, or delete your on-device Trail IQ data.</p>
         </section>
 
         <section id="permissions" class="content-section">
           <h2>Permission Management</h2>
-          <p>You can review or change system permissions outside Trail IQ: Location in iOS Settings &gt; Apps &gt; Trail IQ &gt; Location, Bluetooth in iOS Settings &gt; Privacy &amp; Security &gt; Bluetooth, and Apple Health in the Health app &gt; Sharing &gt; Apps and Services &gt; Trail IQ.</p>
+          <p>You can review or change system permissions outside Trail IQ: Location in iOS Settings &gt; Apps &gt; Trail IQ &gt; Location, Bluetooth and Motion &amp; Fitness in iOS Settings &gt; Privacy &amp; Security, and Apple Health in the Health app &gt; Sharing &gt; Apps and Services &gt; Trail IQ.</p>
           <p>Turning off a permission may make related features unavailable, but local workouts, history, settings, and backup tools should remain usable where they do not depend on that permission.</p>
         </section>
 

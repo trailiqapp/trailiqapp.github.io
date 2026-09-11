@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Record outdoor workouts, compare every return and learn from the routes you repeat.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-result.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=10">
+  <link rel="stylesheet" href="assets/site.css?v=11">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,11 +33,17 @@
     "description": "Trail IQ learns how you perform on routes you repeat, then uses that history before, during and after your next outdoor workout.",
     "featureList": [
       "Same-route workout comparison",
-      "Personal route history",
-      "Route-aware coaching",
+      "Personal Route Memory and full-route lookahead",
+      "Evidence-gated route-aware coaching",
       "Optional live Ghost comparison",
+      "Structured workout sessions",
+      "Route-aware interval guidance",
       "Bluetooth heart-rate monitor support",
+      "Bluetooth cycling speed, cadence and power sensors",
+      "Running cadence from supported iPhones",
+      "Transparent training load and optional recovery context",
       "GPX, TCX and FIT workout import",
+      "GPX and TCX workout export",
       "Local-first workout storage"
     ],
     "publisher": {
@@ -86,7 +92,7 @@
         </div>
         <div class="promise-item">
           <strong>Understand the effort</strong>
-          <span>See where time, pace, terrain and heart rate changed.</span>
+          <span>See where time, pace, terrain, sensors and heart rate changed.</span>
         </div>
         <div class="promise-item">
           <strong>Own your data</strong>
@@ -107,22 +113,29 @@
             <div class="story-point">
               <span class="story-index">1</span>
               <div>
-                <strong>Record</strong>
-                <span>Track a workout or import supported GPX, TCX, FIT and Adidas Running files.</span>
+                <strong>Plan</strong>
+                <span>Choose a familiar route, an open workout or a structured session.</span>
               </div>
             </div>
             <div class="story-point">
               <span class="story-index">2</span>
               <div>
-                <strong>Compare</strong>
-                <span>See where you gained, where you slowed and how effort changed.</span>
+                <strong>Move</strong>
+                <span>Follow route progress, workout steps and the metrics your devices can support.</span>
               </div>
             </div>
             <div class="story-point">
               <span class="story-index">3</span>
               <div>
+                <strong>Learn</strong>
+                <span>See the result, the sections that mattered and one practical next step.</span>
+              </div>
+            </div>
+            <div class="story-point">
+              <span class="story-index">4</span>
+              <div>
                 <strong>Return</strong>
-                <span>See what is coming and what your own history suggests before the next attempt.</span>
+                <span>Let your own route history shape what Trail IQ shows the next time.</span>
               </div>
             </div>
           </div>
@@ -145,9 +158,9 @@
     <section class="section release-band">
       <div class="section-inner">
         <div class="section-heading">
-          <p class="eyebrow">Go deeper</p>
-          <h2>Start with the question you have.</h2>
-          <p>Explore the route workflow, learn how to read the data or check the choices that make Trail IQ different.</p>
+          <p class="eyebrow">Explore the workflow</p>
+          <h2>Start with what you want to do.</h2>
+          <p>Go straight to the route, session, sensor or result guidance you need.</p>
         </div>
         <div class="release-grid">
           <a class="release-item release-link" href="compare-runs-same-route/index.html">
@@ -155,20 +168,20 @@
             <strong>Compare familiar routes</strong>
             <p>See how history works before, during and after a repeated workout.</p>
           </a>
-          <a class="release-item release-link" href="guides/index.html">
-            <span>Guides</span>
-            <strong>Read the data better</strong>
-            <p>Turn pace, effort and route sections into useful questions and actions.</p>
+          <a class="release-item release-link" href="help.html#start">
+            <span>Sessions</span>
+            <strong>Build a structured workout</strong>
+            <p>Combine warm-up, work, recovery, repeats and cool-down without overcomplicating it.</p>
           </a>
-          <a class="release-item release-link" href="bluetooth-heart-rate-running-app/index.html">
-            <span>Effort</span>
-            <strong>Add heart-rate context</strong>
-            <p>Learn what a compatible Bluetooth monitor adds and what remains optional.</p>
+          <a class="release-item release-link" href="help.html#heart-rate">
+            <span>Sensors</span>
+            <strong>Connect the data you use</strong>
+            <p>Add heart rate, cycling speed, cadence or power while unavailable metrics stay out of the way.</p>
           </a>
-          <a class="release-item release-link" href="compare/index.html">
-            <span>Choose</span>
-            <strong>Compare the approaches</strong>
-            <p>See how Trail IQ differs from Strava, Moment and Apple Race Route.</p>
+          <a class="release-item release-link" href="help.html#results">
+            <span>Results</span>
+            <strong>Understand what happened</strong>
+            <p>Read the result first, then open only the route, effort or terrain detail that matters.</p>
           </a>
         </div>
       </div>
@@ -177,31 +190,31 @@
     <section class="section band-dark">
       <div class="section-inner">
         <div class="section-heading">
-          <p class="eyebrow">Built for the route ahead</p>
-          <h2>Useful while you move. Clear when you finish.</h2>
-          <p>Advanced route and heart-rate tools stay understandable, optional and focused on the workout.</p>
+          <p class="eyebrow">One connected training story</p>
+          <h2>What is ahead. What to do. What changed.</h2>
+          <p>Trail IQ uses the same trustworthy route and workout evidence before, during and after the effort.</p>
         </div>
 
         <div class="feature-rows">
           <div class="feature-row">
+            <span class="feature-number">Ahead</span>
+            <strong>Preview the route</strong>
+            <p>See meaningful upcoming climbs, recovery opportunities and personal patterns when enough comparable history exists.</p>
+          </div>
+          <div class="feature-row">
+            <span class="feature-number">Plan</span>
+            <strong>Shape the session</strong>
+            <p>Build time, distance or manual steps with repeats and supported targets. Route context advises; it never rewrites the plan.</p>
+          </div>
+          <div class="feature-row">
             <span class="feature-number">Live</span>
-            <strong>Train the route</strong>
-            <p>Follow route progress, remaining distance and segment context. Choose a previous effort as your live ghost when you want a target.</p>
+            <strong>Stay oriented</strong>
+            <p>Follow distance and ascent remaining, meaningful bends, off-route rejoin context, workout steps and an optional live Ghost.</p>
           </div>
           <div class="feature-row">
-            <span class="feature-number">Effort</span>
-            <strong>Connect heart rate</strong>
-            <p>Use a compatible Bluetooth monitor for live zones, heart-rate goals, workout HRV where supported and richer post-workout review. <a href="bluetooth-heart-rate-running-app/index.html">Explore Bluetooth heart-rate training.</a></p>
-          </div>
-          <div class="feature-row">
-            <span class="feature-number">Cues</span>
-            <strong>Stay aware</strong>
-            <p>Optional on-screen guidance, distinct tones, haptics and short spoken cues can signal route, segment and effort changes without taking over your workout.</p>
-          </div>
-          <div class="feature-row">
-            <span class="feature-number">Review</span>
-            <strong>See the whole story</strong>
-            <p>Route Comparison, Route Replay, Coach Review and three focused highlight reports turn maps and metrics into a result you can act on.</p>
+            <span class="feature-number">Context</span>
+            <strong>Understand the training</strong>
+            <p>Review evidence-backed route changes, transparent recent load and optional Apple Health recovery context without an opaque readiness score.</p>
           </div>
         </div>
       </div>
@@ -210,37 +223,37 @@
     <section class="section">
       <div class="section-inner">
         <div class="section-heading">
-          <p class="eyebrow">Designed to be read at a glance</p>
-          <h2>Your workout, without the wall of numbers.</h2>
-          <p>Maps, comparison rings and focused charts make the important result visible first. Detail is there when you want it.</p>
+          <p class="eyebrow">Plan, move, learn</p>
+          <h2>Each screen has one clear job.</h2>
+          <p>Choose the session, follow the live context, then read the result without hunting through repeated numbers.</p>
         </div>
 
         <div class="showcase-grid">
           <article class="showcase">
             <div class="showcase-media">
-              <img src="assets/screen-replay.png" alt="Trail IQ Route Replay showing a real route and comparison points.">
+              <img src="assets/screen-session.png" alt="Trail IQ structured workout library with quick-start and saved sessions.">
             </div>
             <div class="showcase-copy">
-              <h3>Replay the route</h3>
-              <p>Review the route, overlays and finish context spatially.</p>
+              <h3>Build the session</h3>
+              <p>Start quickly or create reusable steps for the workout you intend to do.</p>
             </div>
           </article>
           <article class="showcase">
             <div class="showcase-media">
-              <img src="assets/screen-comparison.png" alt="Trail IQ same-route comparison with time and section changes.">
+              <img src="assets/screen-live.png" alt="Trail IQ live workout showing a real route, route progress and remaining distance.">
             </div>
             <div class="showcase-copy">
-              <h3>Compare the route</h3>
-              <p>See today, the previous matching effort and the sections that changed. <a href="compare-runs-same-route/index.html">Learn how same-route comparison works.</a></p>
+              <h3>Follow what matters now</h3>
+              <p>Keep route progress, remaining work and live metrics together while you move.</p>
             </div>
           </article>
           <article class="showcase">
             <div class="showcase-media">
-              <img src="assets/screen-trends.png" alt="Trail IQ fitness snapshot and workload trends.">
+              <img src="assets/screen-result.png" alt="Trail IQ workout result with a same-route comparison and complete key metrics.">
             </div>
             <div class="showcase-copy">
-              <h3>Follow the bigger picture</h3>
-              <p>Explore training trends and fitness snapshots when relevant data exists.</p>
+              <h3>See the answer first</h3>
+              <p>Understand the outcome, then open the focused route, pacing, effort or terrain report you need.</p>
             </div>
           </article>
         </div>
