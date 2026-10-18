@@ -20,7 +20,8 @@
   <meta name="twitter:description" content="See where time changed and use your own route history before, during and after your next workout.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-comparison.png">
   <link rel="icon" href="../assets/app-icon.png">
-  <link rel="stylesheet" href="../assets/site.css?v=11">
+  <link rel="stylesheet" href="../assets/site.css?v=13">
+  <script src="../assets/site.js?v=13" defer></script>
 </head>
 <body>
   <nav class="site-nav on-dark" aria-label="Trail IQ public site">
@@ -99,7 +100,7 @@
         </div>
 
         <figure class="single-screen">
-          <img src="../assets/screen-comparison.png" alt="Trail IQ Route Comparison showing the result and sections that changed against an earlier workout.">
+          <img src="../assets/screen-comparison.png" alt="Trail IQ Route Story showing the result and sections that changed against an earlier workout.">
         </figure>
       </div>
     </section>
@@ -147,11 +148,13 @@
               <li>Review the latest, quickest and typical matching efforts</li>
               <li>See recurring strong and difficult route sections when enough history exists</li>
               <li>Preview upcoming climbs and other meaningful route features</li>
-              <li>Choose a previous workout as an optional live Ghost</li>
+              <li>With enough history and a selected goal, see Today's Strategy: an opening approach, supported Protect/Hold/Push actions and a possible finish range</li>
+              <li>Choose an optional recorded Ghost: Fastest, Latest, a workout you select, or Typical and Best Executed when supported</li>
+              <li>Use Today's Strategy as a clearly labelled Generated reference when a supported finish range exists</li>
             </ul>
           </div>
           <figure class="single-screen">
-            <img src="../assets/screen-replay.png" alt="Trail IQ Route Replay showing a recorded route and its route context.">
+            <img src="../assets/screen-strategy.png" alt="Trail IQ Ready route briefing for The Tan Track, built from comparable previous runs.">
           </figure>
         </article>
 
@@ -159,11 +162,12 @@
           <div class="feature-copy">
             <p class="eyebrow">During the workout</p>
             <h2>See what is coming while the route is still unfolding.</h2>
-            <p>Follow the assigned route, remaining distance and live metrics from the map-first workout screen. When you choose a Ghost, its marker shows where the earlier effort was at the same elapsed time.</p>
+            <p>Follow the assigned route, remaining distance and live metrics from the map-first workout screen. A recorded Ghost shows where the earlier effort was at the same elapsed time. A Generated strategy Ghost is a temporary plan-based reference, not a claim that you previously ran that pace.</p>
             <ul>
               <li>Track your progress along the assigned route</li>
               <li>Compare against a selected earlier effort with live Ghost</li>
               <li>Receive optional route, segment and heart-rate coaching cues</li>
+              <li>Hear supported Protect, Hold or Push actions based on reliable route progress and fresh effort evidence</li>
               <li>Keep spoken cues, tones and haptics under your control</li>
             </ul>
           </div>
@@ -181,6 +185,8 @@
               <li>Compare against the previous matching workout</li>
               <li>Review pace or speed changes by route section</li>
               <li>Add heart-rate context when compatible data was recorded</li>
+              <li>Read concentric current/prior rings and baseline markers on split bars</li>
+              <li>Compare running cadence across route progress when both efforts recorded it</li>
               <li>Update Route Memory as reliable repeated efforts accumulate</li>
             </ul>
           </div>
@@ -188,6 +194,20 @@
             <img src="../assets/screen-result.png" alt="Trail IQ Workout Result showing a same-route outcome and comparison metrics.">
           </figure>
         </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cadence-comparison-title">
+      <div class="section-inner feature-detail">
+        <div class="feature-copy">
+          <p class="eyebrow">More than a finishing time</p>
+          <h2 id="cadence-comparison-title">Compare how you moved, as well as how fast.</h2>
+          <p>In Pace &amp; Splits, running cadence joins the same route baseline as the rest of the result. Compare average steps per minute, then follow the two traces along route progress rather than elapsed time.</p>
+          <p>The coloured outer ring represents this run; the grey inner ring represents the selected prior run. The change label tells you the difference. Higher cadence alone does not establish better form or a better workout.</p>
+          <p>Cadence needs iPhone Motion data. The route chart needs usable route and cadence samples in both efforts; a run without those samples keeps its other comparisons.</p>
+          <div class="actions"><a class="button" href="../help.html#result-comparisons">Read the comparisons</a></div>
+        </div>
+        <figure class="single-screen"><img src="../assets/screen-cadence.png" alt="Trail IQ Running Cadence report comparing two Tan Track runs with concentric rings and route-aligned traces."></figure>
       </div>
     </section>
 

@@ -20,12 +20,14 @@
   <meta name="twitter:description" content="Record outdoor workouts, compare every return and learn from the routes you repeat.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-result.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=11">
+  <link rel="stylesheet" href="assets/site.css?v=13">
+  <script src="assets/site.js?v=13" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "Trail IQ",
+    "softwareVersion": "1.2.0",
     "operatingSystem": "iOS",
     "applicationCategory": "HealthApplication",
     "url": "https://trailiqapp.github.io/",
@@ -34,13 +36,20 @@
     "featureList": [
       "Same-route workout comparison",
       "Personal Route Memory and full-route lookahead",
+      "Personal route strategy with an opening plan and supported finish range",
+      "Adaptive Protect, Hold and Push guidance",
       "Evidence-gated route-aware coaching",
       "Optional live Ghost comparison",
+      "Typical and Best Executed recorded Ghost references when supported",
+      "Clearly labelled Generated strategy Ghost",
+      "Strategy-aware spoken guidance with evidence and repetition limits",
       "Structured workout sessions",
       "Route-aware interval guidance",
       "Bluetooth heart-rate monitor support",
       "Bluetooth cycling speed, cadence and power sensors",
       "Running cadence from supported iPhones",
+      "Same-route cadence charts and concentric workout comparisons",
+      "Heart-rate charts with the selected goal range",
       "Transparent training load and optional recovery context",
       "GPX, TCX and FIT workout import",
       "GPX and TCX workout export",
@@ -73,9 +82,9 @@
     <header class="hero">
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Route-first outdoor training</p>
+          <p class="eyebrow">Trail IQ 1.2.0 &middot; Now available</p>
           <h1>Trail IQ</h1>
-          <p class="lede">Compare walks, runs and rides on the same route. Trail IQ learns from every return, shows what is coming and uses your own history to help with the next effort.</p>
+          <p class="lede">Know what is coming. Use your own history to decide how to handle it. Trail IQ connects the walks, runs and rides you repeat with a plan for today and a clearer review afterward.</p>
           <div class="actions">
             <a class="button bright" href="https://apps.apple.com/app/id6786252489">View on the App Store</a>
             <a class="button ghost" href="compare-runs-same-route/index.html">Compare repeated routes</a>
@@ -114,14 +123,14 @@
               <span class="story-index">1</span>
               <div>
                 <strong>Plan</strong>
-                <span>Choose a familiar route, an open workout or a structured session.</span>
+                <span>Choose a familiar route and a goal. With enough history, preview an opening plan and the sections worth protecting, holding or pushing.</span>
               </div>
             </div>
             <div class="story-point">
               <span class="story-index">2</span>
               <div>
                 <strong>Move</strong>
-                <span>Follow route progress, workout steps and the metrics your devices can support.</span>
+                <span>Follow route progress, choose a useful Ghost reference and hear supported advice when it matters.</span>
               </div>
             </div>
             <div class="story-point">
@@ -204,17 +213,17 @@
           <div class="feature-row">
             <span class="feature-number">Plan</span>
             <strong>Shape the session</strong>
-            <p>Build time, distance or manual steps with repeats and supported targets. Route context advises; it never rewrites the plan.</p>
+            <p>Use a history-based route strategy or build a structured session. Prefer a simple start screen? Hide the Session selector in settings.</p>
           </div>
           <div class="feature-row">
             <span class="feature-number">Live</span>
             <strong>Stay oriented</strong>
-            <p>Follow distance and ascent remaining, meaningful bends, off-route rejoin context, workout steps and an optional live Ghost.</p>
+            <p>Follow distance and ascent remaining, route sections and an optional Ghost: a previous effort, a representative run or a clearly labelled Generated strategy when available.</p>
           </div>
           <div class="feature-row">
             <span class="feature-number">Context</span>
             <strong>Understand the training</strong>
-            <p>Review evidence-backed route changes, transparent recent load and optional Apple Health recovery context without an opaque readiness score.</p>
+            <p>Compare time, pace, effort and recorded cadence on the same route. Review recent training load and optional Apple Health recovery context.</p>
           </div>
         </div>
       </div>
@@ -253,7 +262,7 @@
             </div>
             <div class="showcase-copy">
               <h3>See the answer first</h3>
-              <p>Understand the outcome, then open the focused route, pacing, effort or terrain report you need.</p>
+              <p>Read today against the prior effort in concentric comparison rings, then open the route, pacing, effort or terrain report you need.</p>
             </div>
           </article>
         </div>

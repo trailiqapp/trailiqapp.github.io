@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#07110f">
   <title>Trail IQ Features | Learn from every route</title>
-  <meta name="description" content="Explore Trail IQ route memory, structured workouts, live navigation, sensor metrics, workout results and local-first privacy.">
+  <meta name="description" content="Explore Trail IQ personal route strategy, adaptive coaching, cadence comparisons, heart-rate target charts, structured workouts and local-first privacy.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://trailiqapp.github.io/features.html">
   <meta property="og:type" content="website">
@@ -20,7 +20,8 @@
   <meta name="twitter:description" content="Plan structured sessions, follow route-aware guidance and learn from personal route history without giving up control of your data.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-comparison.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=11">
+  <link rel="stylesheet" href="assets/site.css?v=13">
+  <script src="assets/site.js?v=13" defer></script>
 </head>
 <body>
   <nav class="site-nav on-dark" aria-label="Trail IQ public site">
@@ -86,7 +87,30 @@
           </figure>
         </article>
 
-        <article class="feature-detail reverse">
+        <article class="feature-detail reverse" id="route-strategy">
+          <div class="feature-copy">
+            <p class="eyebrow">Personal route strategy</p>
+            <h3>A plan for this route, based on your own history.</h3>
+            <p>Choose a familiar route and an effort goal. With enough comparable workouts, Today's Strategy suggests how to open, which sections deserve care and where you have shown room to build.</p>
+            <ul>
+              <li>An opening approach matched to today's goal</li>
+              <li>Protect, Hold or Push advice for supported route sections</li>
+              <li>An expected finish range when the evidence supports one</li>
+              <li>A clear definition of success for an easy, steady or hard effort</li>
+              <li>Confidence and a Why this strategy explanation you can inspect</li>
+            </ul>
+            <p>Personal strategy needs at least five comparable same-activity efforts and a selected goal. A new route can still show terrain context while its history grows.</p>
+            <div class="actions">
+              <a class="button" href="help.html#route-strategy">Use your route strategy</a>
+            </div>
+          </div>
+          <figure class="single-screen">
+            <img src="assets/screen-strategy.png" alt="Trail IQ Ready route briefing for The Tan Track, using comparable previous runs.">
+            <figcaption>The route briefing is shown here. Personal strategy adds goal-specific advice when the required evidence is available.</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature-detail">
           <div class="feature-copy">
             <p class="eyebrow">Structured workouts</p>
             <h3>Give the session a useful shape.</h3>
@@ -94,13 +118,15 @@
             <ul>
               <li>Quick starts for common easy, tempo and interval sessions</li>
               <li>Time, distance or manual steps with repeat groups</li>
+              <li>Reorder, duplicate and edit steps without rebuilding the session</li>
               <li>Pace, speed, heart-rate-zone and cycling-power targets when supported</li>
               <li>Pause, resume, skip and relaunch-safe step progress</li>
               <li>Route context can warn that a hard step meets a climb or familiar section</li>
               <li>The route never silently changes or moves your prescribed workout</li>
             </ul>
+            <p>Structured sessions are optional. Turn off Show Session Selector in Workout Setup for a simpler start screen; your saved sessions remain available when you turn it back on.</p>
             <div class="actions">
-              <a class="button" href="help.html#start">Build a session</a>
+              <a class="button" href="help.html#structured-sessions">Build a session</a>
             </div>
           </div>
           <figure class="single-screen">
@@ -126,7 +152,7 @@
             </div>
           </div>
           <figure class="single-screen">
-            <img src="assets/screen-trends.png" alt="Trail IQ Results screen showing fitness snapshots and transparent training load.">
+            <img src="assets/screen-trends.png" alt="Trail IQ Results screen showing aligned fitness snapshot donuts and workload trends.">
           </figure>
         </article>
       </div>
@@ -163,11 +189,14 @@
           <div class="feature-copy">
             <p class="eyebrow">Route-aware coaching</p>
             <h3>Hear the most useful supported message.</h3>
-            <p>Trail IQ can combine what is ahead, how your stronger efforts handled it and how today is unfolding. When personal evidence is weak, it falls back to a neutral route fact or stays quiet.</p>
+            <p>Trail IQ can combine what is ahead, how your stronger efforts handled it and how today is unfolding. Optional speech turns a supported Protect, Hold or Push recommendation into a short action. When personal evidence is weak, it falls back to a neutral route fact or stays quiet.</p>
             <ul>
               <li>Route fact, personal history or current-execution context according to evidence</li>
               <li>Section cues ranked by importance and proximity</li>
+              <li>Personal strategy adapts to reliable route progress and fresh effort data</li>
+              <li>Easy-day guidance protects the intended effort instead of chasing a faster time</li>
               <li>Structured-step cues take priority when messages would collide</li>
+              <li>Effort corrections and off-route warnings take priority over routine strategy advice</li>
               <li>Stable cooldown and deduplication prevent repeated announcements</li>
               <li>Distinct haptics, tones and optional short spoken guidance</li>
               <li>Live Ghost remains optional and independent of saved route comparison</li>
@@ -178,6 +207,27 @@
           </div>
           <figure class="single-screen">
             <img src="assets/screen-ghost.png" alt="Trail IQ live workout with an optional Ghost comparison on a real route.">
+          </figure>
+        </article>
+
+        <article class="feature-detail" id="ghost-references">
+          <div class="feature-copy">
+            <p class="eyebrow">Choose your reference</p>
+            <h3>Your fastest effort is not always the right one to follow.</h3>
+            <p>Live Ghost can follow Fastest, Latest or a workout you choose. With enough compatible history, it can also help you practise a more representative or better-controlled effort.</p>
+            <ul>
+              <li>Typical selects a real recording close to your median pace, not an invented average workout</li>
+              <li>Best Executed favours goal-matched effort control, a measured heart-rate record and a controlled opening and finish</li>
+              <li>Today's Strategy follows a temporary Generated reference with an expected finish range</li>
+              <li>Options without enough supporting evidence stay hidden</li>
+              <li>A Generated Ghost is never saved as a workout or used as a recorded result baseline</li>
+            </ul>
+            <p>Live Ghost remains optional and independent of saved route comparison. You can leave it off and still compare a completed workout with a matching earlier effort.</p>
+            <div class="actions"><a class="button bright" href="help.html#live-ghost">Choose a Ghost</a></div>
+          </div>
+          <figure class="single-screen">
+            <img src="assets/screen-ghost-options.png" alt="Trail IQ Ghost picker showing available recorded references, including Typical on route.">
+            <figcaption>Only references supported by the selected route and available history are offered.</figcaption>
           </figure>
         </article>
 
@@ -206,19 +256,19 @@
         <div class="section-heading stage-heading">
           <p class="eyebrow">After the workout</p>
           <h2>See the answer first. Understand where it came from.</h2>
-          <p>The result keeps each number in one logical place, then turns the strongest available evidence into a short debrief.</p>
+          <p>The result gives you a complete summary, focused reports and a short debrief based on the strongest available evidence.</p>
         </div>
 
         <article class="feature-detail">
           <div class="feature-copy">
             <p class="eyebrow">Workout Result</p>
             <h3>A complete summary without repeated statistics.</h3>
-            <p>The headline identifies the workout and route outcome. Key comparison rings show today against the matching baseline, while deeper reports each own one kind of question.</p>
+            <p>The headline identifies the workout and route outcome. Concentric comparison rings put today on the coloured outer ring and the matching prior effort on the grey inner ring. Each deeper report answers a different question.</p>
             <ul>
-              <li>Complete key numbers including distance, pace or speed, heart rate, HRV, calories and elevation when recorded</li>
+              <li>Complete key numbers including distance, pace or speed, heart rate, HRV, calories and elevation when available</li>
               <li>Coach Review with supported evidence and a practical next-workout action</li>
-              <li>Pace &amp; Splits or Speed &amp; Splits for execution and consistency</li>
-              <li>Effort &amp; Heart Rate for zones, drift and Workout HRV</li>
+              <li>Pace &amp; Splits or Speed &amp; Splits for execution, baseline split markers and recorded cadence</li>
+              <li>Effort &amp; Heart Rate for zones, the selected goal range, drift and Workout HRV</li>
               <li>Terrain &amp; Conditions for elevation and available weather context</li>
               <li>Unavailable reports and metrics remain hidden instead of appearing blank</li>
             </ul>
@@ -241,14 +291,34 @@
               <li>Where time was gained or lost across stable route sections</li>
               <li>How today handled known slowdowns, strengths, climbs and finishes</li>
               <li>Careful effort interpretation only when both workouts support it</li>
-              <li>Route Replay with route, pace, heart-rate and elevation overlays when available</li>
+              <li>Route Story replay with route, pace, heart-rate and elevation overlays when available</li>
               <li>Qualified wording where an observation is useful but not causal</li>
             </ul>
           </div>
           <figure class="single-screen">
-            <img src="assets/screen-comparison.png" alt="Trail IQ Route Comparison explaining overall and section-level changes.">
+            <img src="assets/screen-comparison.png" alt="Trail IQ Route Story explaining overall and section-level changes.">
           </figure>
         </article>
+
+        <div class="section-heading report-gallery-heading">
+          <p class="eyebrow">Focused comparisons</p>
+          <h3>See the pattern behind the number.</h3>
+          <p>Movement, effort and route time each have a clear home. Comparisons appear only when both workouts provide the relevant data.</p>
+        </div>
+        <div class="showcase-grid">
+          <article class="showcase">
+            <div class="showcase-media"><img src="assets/screen-cadence.png" alt="Running cadence compared with a prior run using concentric rings and cadence over route progress."></div>
+            <div class="showcase-copy"><h3>Cadence on the same route</h3><p>Compare average steps per minute and see how cadence changed along each run. Peak cadence, active steps and iPhone Motion source remain together.</p></div>
+          </article>
+          <article class="showcase">
+            <div class="showcase-media"><img src="assets/screen-effort.png" alt="Trail IQ heart-rate range with the selected effort target highlighted and a zone distribution donut."></div>
+            <div class="showcase-copy"><h3>Effort against your goal</h3><p>A highlighted target on the range rail and heart-rate chart puts the recorded effort beside the range you selected.</p></div>
+          </article>
+          <article class="showcase">
+            <div class="showcase-media"><img src="assets/screen-comparison.png" alt="Trail IQ Route Story showing the time comparison with an earlier run before section-level changes."></div>
+            <div class="showcase-copy"><h3>Time, then the sections</h3><p>Read the overall route comparison first, then follow the gap chart and section changes to understand where the result came from.</p></div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -278,7 +348,7 @@
             </div>
           </div>
           <figure class="single-screen">
-            <img src="assets/screen-replay.png" alt="Trail IQ Route Replay showing route geometry retained from a recorded or imported workout.">
+            <img src="assets/screen-replay.png" alt="Trail IQ Route Story replay showing the real Tan Track route and its time comparison.">
           </figure>
         </article>
       </div>

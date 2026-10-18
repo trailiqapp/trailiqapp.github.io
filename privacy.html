@@ -20,7 +20,8 @@
   <meta name="twitter:description" content="How Trail IQ handles workout, route, heart-rate, wellness and optional Apple Health data.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/app-icon.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=11">
+  <link rel="stylesheet" href="assets/site.css?v=13">
+  <script src="assets/site.js?v=13" defer></script>
 </head>
 <body>
   <nav class="site-nav" aria-label="Trail IQ public site">
@@ -101,6 +102,8 @@
 
           <h3>Fitness And Workout Data</h3>
           <p>Trail IQ stores workout type, start and end time, duration, distance, pace or speed, elevation, calories, route assignments, comparison state, coaching context, and available weather-condition snapshots for workouts you record, import, or edit.</p>
+          <p>Personal route strategy and live guidance are calculated on device from comparable workout history, the selected goal and available route and sensor data. Cadence comparisons and route-progress charts also use locally stored workout samples. These features do not send your history to a Trail IQ service.</p>
+          <p>Typical and Best Executed Ghost references select existing local workouts when the evidence supports them. A Today's Strategy Ghost is a temporary, Generated route trace kept in memory, not a saved workout or recorded comparison baseline. Strategy-aware speech uses supported on-device route and effort context; these features add no developer data collection.</p>
           <p>Saved structured workout plans and restorable progress for an underway plan are stored locally. Route context shown beside a planned step is calculated on device and does not alter the saved plan.</p>
 
           <h3>Bluetooth Heart-Rate Monitor Data</h3>

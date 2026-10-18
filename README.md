@@ -50,11 +50,37 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 - `sitemap.xml` - canonical index of public Trail IQ pages.
 - `assets/site.css` - shared styling for the public pages.
 - `assets/app-icon.png` - Trail IQ app icon used by the public pages.
-- `assets/screen-*.png` - current Trail IQ product screenshots used across the marketing pages.
+- `assets/screen-*.png` - Trail IQ product screenshots, including cadence and heart-rate goal comparisons; see `assets/SCREENSHOTS.md` for capture provenance.
+- `assets/site.js` - expands screenshots and opens directly linked help workflows.
 - `.nojekyll` - keeps GitHub Pages serving the static files directly.
 
 ## Release Notes
 
 Trail IQ is positioned as a local-first fitness and wellness app. The public pages should continue to avoid diagnostic claims, broad unsupported sensor claims, analytics/tracking claims, or any wording that suggests Trail IQ uploads personal health data to Trail IQ servers.
 
-The offline product copy and screenshots currently describe the Trail IQ 1.1.0 (250) release candidate. Keep these changes local until the corresponding app version is ready to publish.
+The website reflects implemented features through Trail IQ **1.2.0 (259)**.
+Apple's Australian storefront lookup confirmed public version **1.2.0**, released
+**17 October 2026**, when checked on **18 October 2026**. Personal Route Strategy Days 1-12 are implemented;
+later planned sprints and Apple Watch features are not advertised as available.
+The corresponding app version is now publicly available. Website publication
+is separate from an App Store submission; these pages do not change app builds,
+purchase products or release settings.
+
+Coverage includes the history-based route strategy and live execution guidance,
+the optional Session selector, complete workout summaries, concentric comparison
+donuts, same-route cadence traces, split baseline markers, selected heart-rate
+target bands, and the existing structured sessions, imports, exports, sensor,
+training-load, recovery and privacy workflows.
+
+Build 257 adds the evidence-gated Typical and Best Executed recorded Ghosts,
+Today's Strategy as a clearly labelled Generated reference, and strategy-aware
+spoken coaching with correction priority, cooldowns and stable event identities.
+Generated references are never stored as workouts or recorded result baselines.
+
+Build 259 is the prepared release baseline. It changes the build number and
+release documentation only; the build-257 feature set and screenshots remain
+applicable. Capture build numbers are provenance, not separate advertised app
+versions.
+
+Open `index.html` directly in a browser to review the complete local site. Help
+links to individual workflows expand the corresponding answer automatically.

@@ -20,7 +20,8 @@
   <meta name="twitter:description" content="Practical Trail IQ guides for routes, structured sessions, sensors, coaching, results, recovery context and local data.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-home.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=11">
+  <link rel="stylesheet" href="assets/site.css?v=13">
+  <script src="assets/site.js?v=13" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,6 +57,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Route Memory learns evidence-backed patterns from repeated workouts on the same route, including typical performance and recurring strong or difficult sections."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When does Today's Strategy appear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Select a familiar route and an effort goal. Today's Strategy needs at least five comparable same-activity efforts and sufficient route evidence. It shows an opening approach, supported Protect, Hold or Push actions, and an expected finish range when available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I hide the Session selector?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Open Settings, then Workout Setup, and turn off Show Session Selector. Your saved sessions remain stored. Turn the setting back on when you want to use them."
         }
       },
       {
@@ -193,7 +210,7 @@
       </details>
 
       <details class="workflow">
-        <summary>
+        <summary id="structured-sessions">
           <span>Choose or build a structured session</span>
           <small>Warm-up, work, recovery and cool-down</small>
         </summary>
@@ -201,7 +218,7 @@
           <ol class="workflow-steps">
             <li><span>1</span><p>Choose the activity on the start screen, then tap <strong>Session</strong>.</p></li>
             <li><span>2</span><p>Choose a session under <strong>Quick Start</strong>, select a saved session, or tap the plus button to create one.</p></li>
-            <li><span>3</span><p>When building, add warm-up, work, recovery or cool-down steps. Set each step by time or distance and add a target only when you need one.</p></li>
+            <li><span>3</span><p>When building, add warm-up, work, recovery or cool-down steps. Choose time, distance or manual completion, add a target if useful, and reorder steps when the sequence needs adjusting.</p></li>
             <li><span>4</span><p>Save and select the session, then start the workout normally.</p></li>
             <li><span>5</span><p>Follow the current step and remaining time or distance. Use the skip control when it is sensible to move on.</p></li>
           </ol>
@@ -211,6 +228,7 @@
           </div>
           <div class="workflow-note"><strong>Sensor targets:</strong> Heart-rate-zone and cycling-power targets are available only when the required sensor is connected.</div>
           <div class="workflow-note"><strong>Using a familiar route:</strong> Trail IQ may show where a hard step meets a known climb or route section. This is advice only; it does not move or rewrite your session steps.</div>
+          <div class="workflow-note"><strong>Prefer a simpler start screen?</strong> Open <strong>Settings &gt; Workout Setup</strong> and turn off <strong>Show Session Selector</strong>. This clears the session selected for your next workout and hides the selector. Saved sessions are kept; turn the setting back on to use them again.</div>
         </div>
       </details>
     </section>
@@ -271,6 +289,30 @@
       </details>
 
       <details class="workflow">
+        <summary id="route-strategy">
+          <span>Use Today's Strategy on a familiar route</span>
+          <small>Your history, today's goal and the route ahead</small>
+        </summary>
+        <div class="workflow-body">
+          <div class="workflow-intro"><h3>Before you start</h3><p>You need at least five comparable workouts of the same activity on the route. Choose an effort goal; an open workout does not generate a personal strategy.</p></div>
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Open <strong>Results &gt; Routes</strong>, choose the familiar route, and tap <strong>Start Route</strong> to open <strong>Ready</strong>.</p></li>
+            <li><span>2</span><p>Choose the effort goal you intend to follow. Heart-rate goals need a connected monitor.</p></li>
+            <li><span>3</span><p>Read <strong>Today's Strategy</strong> for the opening approach and the supported route actions.</p></li>
+            <li><span>4</span><p>Check <strong>Expected finish</strong> when a range is available and read <strong>Success today</strong>. Open <strong>Why this strategy</strong> to see its evidence.</p></li>
+            <li><span>5</span><p>Start the workout. Follow the route and the current guidance; the suggested approach can adapt as reliable progress and fresh heart-rate data become available.</p></li>
+          </ol>
+          <div class="cue-table" role="table" aria-label="Personal route strategy actions">
+            <div class="cue-row cue-heading" role="row"><span role="columnheader">Action</span><span role="columnheader">Meaning</span><span role="columnheader">How to use it</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Protect</strong></span><span role="cell">Preserve effort for what follows</span><span role="cell">Keep a difficult section controlled</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Hold</strong></span><span role="cell">Stay with the intended approach</span><span role="cell">Keep effort steady through the section</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Push</strong></span><span role="cell">History and today's goal support building</span><span role="cell">Build gradually when the guidance supports it</span></div>
+          </div>
+          <div class="workflow-note"><strong>No strategy showing?</strong> Check the selected goal and same-activity route history. Partial, reverse or uncertain matches limit personal guidance. Pauses, off-route tracking and stale sensor readings can also suppress live predictions. Live Ghost is optional.</div>
+        </div>
+      </details>
+
+      <details class="workflow">
         <summary>
           <span>Save and reuse a completed route</span>
           <small>Turn a recorded path into a named route</small>
@@ -303,8 +345,8 @@
           <ol class="workflow-steps">
             <li><span>1</span><p>Choose or automatically match the route, then complete the workout normally.</p></li>
             <li><span>2</span><p>Open the saved <strong>Workout Result</strong>.</p></li>
-            <li><span>3</span><p>Open <strong>Route Comparison</strong> to see the direct result and the route sections where time changed.</p></li>
-            <li><span>4</span><p>Open <strong>Route Replay</strong> to view the route, overlays and finish context on the map.</p></li>
+            <li><span>3</span><p>Use <strong>Route Story</strong> for the time comparison, gap chart, section changes and route history.</p></li>
+            <li><span>4</span><p>Tap <strong>Full Map</strong> to inspect the completed route and available overlays.</p></li>
           </ol>
           <div class="workflow-outcome">
             <strong>What you will see</strong>
@@ -316,8 +358,8 @@
 
       <details class="workflow">
         <summary>
-          <span>Use a Live Ghost</span>
-          <small>See a previous effort while you move</small>
+          <span id="live-ghost">Use a Live Ghost</span>
+          <small>Choose a useful reference for today</small>
         </summary>
         <div class="workflow-body">
           <div class="workflow-intro">
@@ -327,7 +369,7 @@
           <ol class="workflow-steps">
             <li><span>1</span><p>Tap <strong>Route</strong> and select a route in <strong>Choose Route</strong>.</p></li>
             <li><span>2</span><p>Turn on <strong>Live Ghost</strong>.</p></li>
-            <li><span>3</span><p>Under <strong>Ghost Opponent</strong>, choose <strong>Fastest on route</strong>, <strong>Latest on route</strong>, or <strong>Choose workout...</strong>.</p></li>
+            <li><span>3</span><p>Under <strong>Ghost Opponent</strong>, choose <strong>Fastest on route</strong>, <strong>Latest on route</strong>, or <strong>Choose workout...</strong>. Additional choices appear only when the route history supports them.</p></li>
             <li><span>4</span><p>Start the workout. Follow your own marker and the ghost marker on the map.</p></li>
           </ol>
           <div class="workflow-outcome">
@@ -335,6 +377,13 @@
             <p>The ghost’s map position and whether it is ahead or behind. The wording always describes the ghost’s position relative to you.</p>
           </div>
           <div class="workflow-note"><strong>Important:</strong> Live Ghost controls only the marker shown during a workout. Turning it off does not turn off the automatic comparison shown after a matched workout.</div>
+          <div class="cue-table" role="table" aria-label="Additional Ghost references">
+            <div class="cue-row cue-heading" role="row"><span role="columnheader">Reference</span><span role="columnheader">What it follows</span><span role="columnheader">When it appears</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Typical on route</strong></span><span role="cell">A real workout close to your median pace</span><span role="cell">At least three compatible forward-route efforts</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Best Executed</strong></span><span role="cell">A controlled recording matched to today's goal, not necessarily your fastest</span><span role="cell">Enough goal-matched history, measured HR and reliable opening, finish and relevant section evidence</span></div>
+            <div class="cue-row" role="row"><span role="cell"><strong>Today's Strategy</strong></span><span role="cell">A temporary reference labelled Generated, with an expected finish range</span><span role="cell">A supported personal strategy, finish estimate and usable route trace</span></div>
+          </div>
+          <div class="workflow-note"><strong>Generated is not recorded:</strong> Today's Strategy does not add a workout to Activity or become the recorded baseline in your saved result. Missing a choice? It stays hidden until its evidence requirements are met; connecting a monitor alone is not enough.</div>
         </div>
       </details>
 
@@ -445,7 +494,9 @@
             <li><span>2</span><p>Open the live metric picker and select <strong>Run Cadence</strong> when it is available.</p></li>
             <li><span>3</span><p>Start moving and allow a short moment for iPhone Motion to establish a current reading.</p></li>
             <li><span>4</span><p>After the workout, open <strong>Pace &amp; Splits</strong> to review average cadence, peak cadence, active steps and source.</p></li>
+            <li><span>5</span><p>If the selected comparison workout also recorded running cadence, read the comparison rings. With usable route and cadence samples in both runs, <strong>Cadence Over Route</strong> compares their traces from start to finish.</p></li>
           </ol>
+          <div class="workflow-note"><strong>Read the comparison:</strong> The coloured outer ring is this workout; the grey inner ring is the prior effort. The chart aligns each run by route progress, so different finishing times can be compared. A higher cadence is a difference to understand, not automatically an improvement.</div>
           <div class="workflow-note"><strong>If it is missing:</strong> Check Motion &amp; Fitness permission in iOS Settings. Trail IQ does not estimate running cadence from GPS when real Motion data is unavailable.</div>
         </div>
       </details>
@@ -485,6 +536,8 @@
             <div class="cue-row" role="row"><span role="cell"><strong>Completion tone</strong></span><span role="cell">The route or workout has finished</span><span role="cell">Review the saved result when safe</span></div>
           </div>
           <div class="workflow-note"><strong>How personal should it sound?</strong> Trail IQ may give a route fact, add your supported history, or relate the section to today’s execution. It uses only the highest level the available route and workout evidence supports.</div>
+          <div class="workflow-note"><strong>Strategy-aware speech:</strong> With <strong>Voice + Tones</strong>, a supported personal route strategy and fresh heart rate, guidance can explain the current Protect, Hold or Push action or an approaching section. Easy and Recovery goals are not treated as permission to push. Personal strategy speech pauses when route progress or sensor evidence is unreliable.</div>
+          <div class="workflow-note"><strong>Less repetition:</strong> An unchanged strategy action is not repeated as your numbers fluctuate. New routine strategy messages are spaced by at least 90 seconds; a meaningful new deviation can be announced after 45 seconds, subject to shared audio limits. Effort corrections and off-route warnings take priority. Choose <strong>Tones</strong> for no speech, or <strong>Off</strong> for no coaching audio.</div>
           <div class="workflow-note"><strong>Good to know:</strong> Cues mix with existing audio instead of stopping it. iOS must allow the workout and audio session to continue while the phone is locked.</div>
         </div>
       </details>
@@ -516,12 +569,27 @@
             <li><span>2</span><p>Read <strong>Coach Review</strong> for what went well and one practical next step.</p></li>
             <li><span>3</span><p>Use <strong>Route Story</strong> to see the workout on the map.</p></li>
             <li><span>4</span><p>Open a tile under <strong>Result Highlights</strong> for its focused report.</p></li>
-            <li><span>5</span><p>Open <strong>Data Quality</strong> only when you want to check which measurements were recorded or estimated.</p></li>
+            <li><span>5</span><p>Open <strong>Data Details</strong> at the bottom to check sources, missing data and which values were calculated or estimated.</p></li>
           </ol>
           <div class="workflow-outcome">
             <strong>What you will see</strong>
             <p>Only relevant sections appear. Heart rate, Workout HRV, conditions and comparisons stay hidden when the required data is unavailable.</p>
           </div>
+          <div class="workflow-note"><strong>Comparison rings:</strong> Today's value is on the coloured outer ring; the prior workout is on the grey inner ring. Both use the same scale. Read the value and change label together; the rings are not a score.</div>
+        </div>
+      </details>
+
+      <details class="workflow">
+        <summary id="result-comparisons"><span>Read pace, cadence and effort comparisons</span><small>Focused reports for movement and heart rate</small></summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Open <strong>Pace &amp; Splits</strong> or <strong>Speed &amp; Splits</strong>. The half-workout comparison uses the yellow outer ring for the first half and cyan inner ring for the second.</p></li>
+            <li><span>2</span><p>Read the trace and split bars. A marker on a split bar shows the selected prior workout's pace when that comparison is available.</p></li>
+            <li><span>3</span><p>For a run with Motion data, continue to <strong>Running Cadence</strong>. Compare steps per minute against the same route baseline when it also recorded cadence.</p></li>
+            <li><span>4</span><p>Open <strong>Effort &amp; Heart Rate</strong>. A selected heart-rate goal highlights the target on the range rail and over-time chart. Zone distribution shows how the recorded time was spent.</p></li>
+            <li><span>5</span><p>Use <strong>Terrain &amp; Conditions</strong> for elevation and recorded weather. Open <strong>Data Details</strong> for source and quality checks.</p></li>
+          </ol>
+          <div class="workflow-note"><strong>An open goal:</strong> There is no selected target to highlight. Missing cadence, HRV or weather stays hidden rather than becoming an empty chart.</div>
         </div>
       </details>
 
@@ -548,15 +616,15 @@
 
       <details class="workflow">
         <summary>
-          <span>Use Route Comparison and Route Replay</span>
+          <span>Explore Route Story and the full map</span>
           <small>Move from the answer to the route story</small>
         </summary>
         <div class="workflow-body">
           <ol class="workflow-steps">
-            <li><span>1</span><p>Open <strong>Route Comparison</strong> to see the overall time difference and largest section changes.</p></li>
-            <li><span>2</span><p>Tap <strong>Route Replay</strong> to open the completed route at a useful map scale.</p></li>
+            <li><span>1</span><p>Use <strong>Route Story</strong> for the overall time comparison, then the gap chart and section changes.</p></li>
+            <li><span>2</span><p>Tap <strong>Full Map</strong> to open the completed route at a useful map scale.</p></li>
             <li><span>3</span><p>Choose the route, comparison, pace, heart-rate or elevation overlay when that data exists.</p></li>
-            <li><span>4</span><p>Use <strong>Route History</strong> when the route has multiple matching attempts.</p></li>
+            <li><span>4</span><p>Read route history and the debrief when enough matching attempts support them.</p></li>
           </ol>
           <div class="workflow-note"><strong>Comparison missing?</strong> The assigned route still appears, but a direct comparison needs an earlier workout of the same activity type on that route.</div>
         </div>
@@ -703,6 +771,16 @@
       <details class="workflow">
         <summary><span>What is Route Memory?</span><small>Your repeated-route patterns</small></summary>
         <div class="workflow-body"><div class="workflow-intro"><p>Route Memory learns evidence-backed patterns from repeated workouts on the same route, including typical performance and recurring strong or difficult sections.</p></div></div>
+      </details>
+
+      <details class="workflow">
+        <summary><span>When does Today's Strategy appear?</span><small>A selected goal and enough comparable history</small></summary>
+        <div class="workflow-body"><div class="workflow-intro"><p>Select a familiar route and an effort goal. Today's Strategy needs at least five comparable same-activity efforts and sufficient route evidence. It shows an opening approach, supported Protect, Hold or Push actions, and an expected finish range when available. <a href="#route-strategy">Follow the strategy workflow.</a></p></div></div>
+      </details>
+
+      <details class="workflow">
+        <summary><span>Can I hide the Session selector?</span><small>A simpler start screen</small></summary>
+        <div class="workflow-body"><div class="workflow-intro"><p>Yes. Open <strong>Settings &gt; Workout Setup</strong> and turn off <strong>Show Session Selector</strong>. Your saved sessions remain stored. Turn the setting back on when you want to use them.</p></div></div>
       </details>
 
       <details class="workflow">
