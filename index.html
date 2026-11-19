@@ -20,14 +20,14 @@
   <meta name="twitter:description" content="Record outdoor workouts, compare every return and learn from the routes you repeat.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-result.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=13">
+  <link rel="stylesheet" href="assets/site.css?v=14">
   <script src="assets/site.js?v=13" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "Trail IQ",
-    "softwareVersion": "1.2.0",
+    "softwareVersion": "1.3.0",
     "operatingSystem": "iOS",
     "applicationCategory": "HealthApplication",
     "url": "https://trailiqapp.github.io/",
@@ -53,7 +53,10 @@
       "Transparent training load and optional recovery context",
       "GPX, TCX and FIT workout import",
       "GPX and TCX workout export",
-      "Local-first workout storage"
+      "Local-first workout storage",
+      "Evidence-linked personal performance and conditions insights",
+      "Route-specific and wider-history performance context",
+      "Inspectable comparison evidence and optional recent weighting"
     ],
     "publisher": {
       "@type": "Organization",
@@ -82,9 +85,9 @@
     <header class="hero">
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Trail IQ 1.2.0 &middot; Now available</p>
+          <p class="eyebrow">Trail IQ 1.3.0 &middot; Now available</p>
           <h1>Trail IQ</h1>
-          <p class="lede">Know what is coming. Use your own history to decide how to handle it. Trail IQ connects the walks, runs and rides you repeat with a plan for today and a clearer review afterward.</p>
+          <p class="lede">Know what is coming. Learn what works for you. Record your walks, runs and rides, compare familiar routes and turn your own history into a clearer next step.</p>
           <div class="actions">
             <a class="button bright" href="https://apps.apple.com/app/id6786252489">View on the App Store</a>
             <a class="button ghost" href="compare-runs-same-route/index.html">Compare repeated routes</a>
@@ -265,6 +268,35 @@
               <p>Read today against the prior effort in concentric comparison rings, then open the route, pacing, effort or terrain report you need.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="personal-history" class="section release-band">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">New in Trail IQ 1.3</p>
+          <h2>Your history. With the evidence attached.</h2>
+          <p>A quicker workout is a result, not the whole story. With enough comparable history, Trail IQ adds personal performance context to help you understand the difference. See what changed, then inspect the evidence behind the insight.</p>
+        </div>
+        <div class="history-gallery">
+          <figure>
+            <img src="assets/screen-personal-context.png" width="1125" height="2436" loading="lazy" alt="Synthetic Trail IQ wider-history evidence showing a faster pace at similar heart rate across comparable workouts.">
+            <figcaption><strong>Compare like with like</strong>A repeated pattern means more than one fast workout. Compare pace or speed at similar measured heart rate.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/screen-personal-evidence.png" width="1125" height="2436" loading="lazy" alt="Trail IQ Why this insight screen showing the period, workout counts, matched heart-rate band and confidence using demonstration data.">
+            <figcaption><strong>Keep the right context</strong>A familiar route can differ from your wider history. Ask &ldquo;Why this?&rdquo; to inspect the scope, counts and confidence.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/screen-recent-context.png" width="1125" height="2436" loading="lazy" alt="Trail IQ evidence screen with Recent weighting expanded, using synthetic workout history.">
+            <figcaption><strong>See recent history in perspective</strong>When supported, compare a recent-weighted estimate with the typical baseline. Your recorded result stays unchanged.</figcaption>
+          </figure>
+        </div>
+        <p class="media-note">Demonstration data. Personal observations need sufficient comparable workouts and reliable recorded data; they are not a fitness diagnosis or a forecast.</p>
+        <div class="actions">
+          <a class="button" href="features.html#personal-history">Explore personal insights</a>
+          <a class="button outline" href="help.html#personal-insights">Read the evidence guide</a>
         </div>
       </div>
     </section>

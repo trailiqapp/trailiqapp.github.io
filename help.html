@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Practical Trail IQ guides for routes, structured sessions, sensors, coaching, results, recovery context and local data.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-home.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=13">
+  <link rel="stylesheet" href="assets/site.css?v=14">
   <script src="assets/site.js?v=13" defer></script>
   <script type="application/ld+json">
   {
@@ -163,6 +163,7 @@
           <a href="#heart-rate">Connect sensors</a>
           <a href="#coaching">Understand cues</a>
           <a href="#results">Read results</a>
+          <a href="#personal-insights">Personal insights (v1.3)</a>
           <a href="#data">Manage data</a>
           <a href="#faq">FAQ</a>
         </div>
@@ -580,6 +581,40 @@
       </details>
 
       <details class="workflow">
+        <summary id="personal-insights"><span>Understand a personal history insight</span><small>Evidence, not a new score</small></summary>
+        <div class="workflow-body">
+          <div class="workflow-intro"><h3>Before you start</h3><p>Use Trail IQ 1.3 or later. You need enough comparable same-activity history and the relevant recorded data. Basic recording and same-route comparisons do not require a personal insight to appear.</p></div>
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Open a completed workout in <strong>Results</strong>. Read the summary and comparison rings first: those are your recorded result.</p></li>
+            <li><span>2</span><p>Look in <strong>Coach Review</strong> for a supported personal performance observation. It may describe pace or speed at similar heart rate, rather than simply repeating the finishing time.</p></li>
+            <li><span>3</span><p>Tap <strong>Why this?</strong>. Check the scope, period, accepted workout counts, heart-rate band and confidence. A familiar-route pattern and wider history can differ; <strong>Why this scope</strong> explains the choice when a supported contrast exists.</p></li>
+            <li><span>4</span><p>Read <strong>Comparison checks</strong> and expand <strong>Not included</strong> when available. Different goals, poor samples or unreliable recorded weather can make a workout unsuitable for that particular observation.</p></li>
+            <li><span>5</span><p>Expand <strong>Recent weighting</strong> if it appears. It puts more emphasis on recent accepted workouts while retaining the typical baseline. It does not alter your result or the comparison rings.</p></li>
+          </ol>
+          <div class="workflow-outcome"><strong>What to expect</strong><p>A short, inspectable observation within the existing report. No personal panel appears when there is too little reliable evidence. An observed performance trend is not proof of improved fitness or a prediction.</p></div>
+          <div class="workflow-note"><strong>Imported history:</strong> Complete measured imports can contribute. A summary-only workout may still be useful in your activity history without supporting a personal trend. More files do not guarantee more usable evidence.</div>
+          <div class="workflow-note"><strong>After upgrading:</strong> Personal context can rebuild locally from existing history; you do not need to record it again. Allow time for a large history to load. Rebuilding cannot recover measurements that were never recorded, and editing or deleting sources can change which observations are supported.</div>
+          <div class="help-visual-pair evidence-pair">
+            <figure><img src="assets/screen-personal-evidence.png" width="1125" height="2436" loading="lazy" alt="Synthetic personal insight evidence showing comparison counts and confidence."><figcaption>Check the evidence</figcaption></figure>
+            <figure><img src="assets/screen-recent-context.png" width="1125" height="2436" loading="lazy" alt="Synthetic insight evidence with Recent weighting expanded."><figcaption>Keep recent history in perspective</figcaption></figure>
+          </div>
+        </div>
+      </details>
+
+      <details class="workflow">
+        <summary id="conditions-context"><span>Understand weather and personal conditions history</span><small>Recorded conditions first, supported patterns second</small></summary>
+        <div class="workflow-body">
+          <ol class="workflow-steps">
+            <li><span>1</span><p>Open a completed outdoor workout, then <strong>Terrain &amp; Conditions</strong> under <strong>Result Highlights</strong>.</p></li>
+            <li><span>2</span><p>Check the available recorded temperature, feels-like temperature, humidity and wind. Older or imported workouts may not contain weather snapshots; Trail IQ does not invent them.</p></li>
+            <li><span>3</span><p>When enough comparable history supports it, a conditions-history observation can explain an association in your workouts. Tap <strong>Why this?</strong> to see its scope, counts and matching checks.</p></li>
+            <li><span>4</span><p>If a personal observation is absent, check the available history and sources in <strong>Data Details</strong>. Missing, conflicting or substantially changing recorded conditions can prevent a strong claim without removing the recorded weather.</p></li>
+          </ol>
+          <div class="workflow-note"><strong>Know the limit:</strong> Weather context does not correct your finishing time, measure sweat loss, prescribe water intake or prove what caused a slower workout. A single snapshot also cannot establish that conditions stayed stable throughout.</div>
+        </div>
+      </details>
+
+      <details class="workflow">
         <summary id="result-comparisons"><span>Read pace, cadence and effort comparisons</span><small>Focused reports for movement and heart rate</small></summary>
         <div class="workflow-body">
           <ol class="workflow-steps">
@@ -786,6 +821,11 @@
       <details class="workflow">
         <summary><span>Can Trail IQ import old workouts?</span><small>GPX, TCX, FIT and more</small></summary>
         <div class="workflow-body"><div class="workflow-intro"><p>Yes. Trail IQ supports GPX, TCX and FIT workout files, supported Adidas Running export archives and optional user-initiated Apple Health import. Import checks help prevent duplicate workouts.</p></div></div>
+      </details>
+
+      <details class="workflow">
+        <summary><span>Why can't I see a personal performance insight?</span><small>Enough reliable history matters</small></summary>
+        <div class="workflow-body"><div class="workflow-intro"><p>First check that you are using Trail IQ 1.3 or later. These observations need repeated comparable efforts, not just a high workout count. Missing measured heart rate, recorded conditions or usable route samples can limit evidence. Your ordinary results, available metrics and eligible same-route comparisons remain. <a href="#personal-insights">Read the personal insight workflow.</a></p></div></div>
       </details>
 
       <details class="workflow">

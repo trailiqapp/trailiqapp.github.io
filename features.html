@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Plan structured sessions, follow route-aware guidance and learn from personal route history without giving up control of your data.">
   <meta name="twitter:image" content="https://trailiqapp.github.io/assets/screen-comparison.png">
   <link rel="icon" href="assets/app-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=13">
+  <link rel="stylesheet" href="assets/site.css?v=14">
   <script src="assets/site.js?v=13" defer></script>
 </head>
 <body>
@@ -44,6 +44,7 @@
         <p class="eyebrow">Features</p>
         <h1>Built around the routes you repeat.</h1>
         <p class="lede">Plan the work, understand the route ahead, stay oriented while moving and learn from what actually happened.</p>
+        <p class="lede"><a href="#personal-history">New in v1.3: personal insights with evidence.</a></p>
       </div>
     </header>
 
@@ -318,6 +319,40 @@
             <div class="showcase-media"><img src="assets/screen-comparison.png" alt="Trail IQ Route Story showing the time comparison with an earlier run before section-level changes."></div>
             <div class="showcase-copy"><h3>Time, then the sections</h3><p>Read the overall route comparison first, then follow the gap chart and section changes to understand where the result came from.</p></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="personal-history" class="section feature-stage release-band">
+      <div class="section-inner">
+        <div class="section-heading stage-heading">
+          <p class="eyebrow">New in Trail IQ 1.3</p>
+          <h2>Understand a pattern, not just a personal best.</h2>
+          <p>Personal post-workout insights connect comparable efforts across your history. Find them within Coach Review and Terrain &amp; Conditions, with the evidence behind each supported observation one tap away.</p>
+        </div>
+        <article class="feature-detail">
+          <div class="feature-copy">
+            <p class="eyebrow">Personal performance context</p>
+            <h3>What changed, and how sure can you be?</h3>
+            <p>Coach Review can describe a supported pace or speed trend at similar measured heart rate. A single fast result does not establish a trend, and a pattern on one route does not automatically apply everywhere.</p>
+            <ul>
+              <li>Comparable activity, goal, terrain, duration, heart-rate coverage and recorded conditions</li>
+              <li>Familiar-route and wider-history patterns kept distinct, with confidence taking priority</li>
+              <li>One personal performance observation in Coach Review; conditions observations stay in Terrain &amp; Conditions</li>
+              <li>Why this? explains the period, source counts, matching checks, confidence and exclusions</li>
+              <li>Optional Recent weighting compares a weighted estimate with the typical baseline without replacing it</li>
+            </ul>
+            <div class="actions"><a class="button" href="help.html#personal-insights">How to read an insight</a></div>
+          </div>
+          <figure class="single-screen">
+            <img src="assets/screen-personal-evidence.png" width="1125" height="2436" loading="lazy" alt="Native Trail IQ personal evidence view with synthetic workout counts, scope, period and confidence.">
+            <figcaption>Trail IQ 1.3. Demonstration history, not a real athlete's result.</figcaption>
+          </figure>
+        </article>
+        <div class="capability-grid">
+          <div class="capability-item"><span>Conditions</span><strong>Context, not an excuse</strong><p>Supported history can reveal an association with temperature, humidity or wind. Unreliable recorded weather cannot support a strong personal claim. No weather correction is applied to your time.</p></div>
+          <div class="capability-item"><span>History</span><strong>Useful imports, honest limits</strong><p>Complete measured imports can contribute. Missing timestamps, incomplete sensor streams or weak history do not become confident conclusions. Ordinary results remain available.</p></div>
+          <div class="capability-item"><span>Privacy</span><strong>Learn locally</strong><p>Personal context is calculated on your device from available history. It adds no Trail IQ account, upload service or new sensor requirement for basic workout recording.</p></div>
         </div>
       </div>
     </section>

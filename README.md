@@ -54,11 +54,17 @@ The marketing URL is optional. The privacy policy and support URLs are the impor
 - `assets/site.js` - expands screenshots and opens directly linked help workflows.
 - `.nojekyll` - keeps GitHub Pages serving the static files directly.
 
-## Release Notes
+## Public-Release Baseline
 
 Trail IQ is positioned as a local-first fitness and wellness app. The public pages should continue to avoid diagnostic claims, broad unsupported sensor claims, analytics/tracking claims, or any wording that suggests Trail IQ uploads personal health data to Trail IQ servers.
 
-The website reflects implemented features through Trail IQ **1.2.0 (259)**.
+The current public release is Trail IQ **1.3.0**, confirmed through Apple's
+Australian storefront lookup on **19 November 2026**, with a release timestamp
+of `2026-11-19T08:52:09Z`. The owner confirmed approval and authorised GitHub
+publication. Version metadata and feature/help copy now describe the released
+capabilities rather than a preview. This does not publish any social package.
+
+The previous public-release baseline was Trail IQ **1.2.0 (259)**.
 Apple's Australian storefront lookup confirmed public version **1.2.0**, released
 **17 October 2026**, when checked on **18 October 2026**. Personal Route Strategy Days 1-12 are implemented;
 later planned sprints and Apple Watch features are not advertised as available.
@@ -84,3 +90,64 @@ versions.
 
 Open `index.html` directly in a browser to review the complete local site. Help
 links to individual workflows expand the corresponding answer automatically.
+
+## Local v1.3 Refresh - 14 November 2026
+
+The website is a separate checkout with its own GitHub repository. Edit and
+preview the site there. The app repository's
+`docs/` mirror contains the 14 November prepared source and assets in Gitea; it
+is not automatically updated by a GitHub publication. Do not add the website as
+an app submodule or include its Git metadata.
+
+Home, Features, Help/FAQ, Support, Privacy, the same-route page and related guides
+cover implemented **1.3.0 (278)** capabilities. The 14 November preparation used
+explicit preview labels while approval was pending. On 19 November, after the
+owner's approval confirmation and a successful live lookup, those labels were
+removed and structured version metadata was updated to 1.3.0 for publication.
+The competitor table deliberately retains its dated 1.2 baseline and October
+research date; a separate link describes v1.3 without claiming the competitor
+research has been refreshed.
+
+New coverage:
+
+- Personal post-workout performance context in Coach Review, not another score.
+- Route-specific versus wider-history evidence with confidence taking priority.
+- Why this? scope, period, counts, matching checks, exclusions and confidence.
+- Optional Recent weighting alongside the retained typical baseline.
+- Conditions-history observations in Terrain & Conditions, with unreliable
+  recorded weather unable to support strong claims and no corrected time or
+  sweat-loss claim.
+- Eligible measured imported history, sparse-data absence, source invalidation
+  and local-only derived models.
+
+The original workout summaries, complete key numbers, concentric donuts, focused
+report groups, Data Details and Route Actions remain unchanged in the app. This
+website update does not change native app code or its build number. Native
+evidence captures use isolated synthetic fixtures, never a physical user's data;
+see [screenshot provenance](assets/SCREENSHOTS.md).
+
+### Local Verification
+
+Verified on 14 November 2026:
+
+- Two current-build native evidence rendering tests passed, zero failures.
+- All 13 public HTML pages reviewed in a Chromium browser at 320, 390, 768 and
+  1440 pixels: 52 page/viewport checks passed.
+- Local links, assets and fragment targets exist; no duplicate IDs, malformed
+  JSON-LD, broken sourced images, stretched new images or tested text overflow.
+- Five Help deep links, including both new workflows, open their destination;
+  screenshot enlargement opens and Escape closes it.
+- Mobile and desktop screenshots visually reviewed. Fixed the new Features
+  image's aspect ratio and kept complete new evidence images in the Help pair.
+- Sitemap XML and repository whitespace checks passed.
+
+The website remains buildless: open `index.html` directly. No server, browser
+test runner, simulator or publication is required to review it. The checks above
+are the 14 November preparation record, not a claim of new native acceptance.
+The live App Store lookup was rechecked on 19 November; competitor claims were
+not re-researched during publication.
+
+Publication checks on 19 November passed all 13 pages at 390 and 1440 pixels
+(26 browser layouts), local assets/anchors, JSON-LD, duplicate IDs, visible text
+overflow and both new Help deep links. The three synthetic captures match their
+prepared originals. Sitemap XML and staged whitespace checks also passed.

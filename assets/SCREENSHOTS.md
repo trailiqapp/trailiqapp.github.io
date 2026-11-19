@@ -1,5 +1,45 @@
 # Website Screenshot Provenance
 
+## v1.3 Captures - 14 November 2026
+
+Three new lossless **1125 x 2436 PNGs** render the actual build-278 SwiftUI
+evidence views on the dedicated iPhone simulator. They use isolated synthetic
+fixtures from the app's presentation tests, not live accounts, device history or
+Pete's data. No capture shows a map, location label, profile or raw identifier.
+They are unretouched native view renders, not full-device marketing composites;
+status bars are not fabricated. Website images preserve the complete viewport
+and can be enlarged. Views below the viewport are naturally outside the capture.
+
+| Asset | Native View / Fixture | What It Shows |
+| --- | --- | --- |
+| `screen-personal-context.png` | `evidence-compact`, performance presentation fixture | Wider-history observation, matched periods, 18 independent demonstration workouts, 3 matched routes, HR band, median pace and confidence |
+| `screen-personal-evidence.png` | `scope-evidence`, hardening fixture | A different route-specific observation, its period, counts, confidence and the start of Why this scope |
+| `screen-recent-context.png` | `recency-evidence`, same hardening fixture | The scrolled evidence view with Recent weighting expanded, typical and weighted pace plus matching checks |
+
+These are separate illustrative scenarios, not one real person's progression.
+Synthetic workout dates and metrics are deliberately fixed by the existing test
+fixtures. The low confidence visible above Recent weighting belongs to the
+alternative wider-history evidence, not a claim that a low-confidence primary
+insight is promoted. Do not relabel these images as measured fitness gains,
+hardware acceptance or an App Store release.
+
+Both selected native capture tests passed on 14 November with zero failures:
+`testEvidenceLayoutsRenderWithSyntheticData` and
+`testRouteConflictAndRecencyLayoutsUseSyntheticData`. No app/test source was
+changed to capture them. The helper's legacy `trailiq-277-ui` output directory
+name is not the capture build: the app remains **1.3.0 (278)**.
+
+All three full images were visually reviewed for source fidelity and private
+data. There are no generated app screenshots. The material was prepared as a
+preview on 14 November. The owner authorised publication on 19 November after
+approval; Apple's Australian lookup confirmed public version 1.3.0 that day.
+The website now describes released features. Capture dates and build provenance
+remain unchanged; publishing does not make these newly recaptured images.
+Retained v1.2 imagery below remains valid for unchanged workflows and is not
+relabeled as new. No real or invented new route geometry is introduced.
+
+## Retained v1.2 Release Images
+
 Local website refresh for Trail IQ **1.2.0 (259)**, prepared 16 October 2026.
 Build 259 changes release metadata only; capture provenance below is unchanged.
 Public app version 1.2.0 was confirmed live in Apple's Australian storefront
